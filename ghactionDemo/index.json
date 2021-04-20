@@ -46,9 +46,11 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
-  },
+    "uilayout": "editor-terminal-v1",
+    "uisettings": "bash",
+    "hideHiddenFiles": true
+},
   "backend": {
-    "imageid": "bash"
+    "imageid": "ubuntu"
   }
 }
