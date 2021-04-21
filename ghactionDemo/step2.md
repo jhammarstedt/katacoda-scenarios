@@ -57,7 +57,7 @@ The full documentation for workflow syntax is available [here](https://docs.gith
                 python test.py
 
 ```
-## Step 1: Check-out GitHub repository
+### Step 1: Check-out GitHub repository
 
 `uses: actions/checkout@v2` is an action that checks-out our repository under $GITHUB_WORKSPACE, so our workflow can access it.
 
@@ -67,7 +67,7 @@ The full documentation for workflow syntax is available [here](https://docs.gith
 
 The documentation for the checkout action is available [here](https://github.com/actions/checkout)
 
-## Step 2: Set up Python environment and run test script
+### Step 2: Set up Python environment and run test script
 
 `uses: actions/setup-python@v1` is an action that sets up a Python environment that we can use for our action. It gives us the ability to download, install and set up Python packages.
 
