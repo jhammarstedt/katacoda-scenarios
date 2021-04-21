@@ -1,5 +1,5 @@
 # Setting up an initial action to test the workflow
-<img src="images/tut_part1.PNG" width="600" height="400" />
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/tut_part1.PNG?raw=true" width="600" height="400" />
 We're gonna start with a "Hello World" action to get set up, create a python file by running:
 
 `cat <<EOM> test.py`
