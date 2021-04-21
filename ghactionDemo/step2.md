@@ -104,6 +104,8 @@ These commands install the dependencies we need for our action using pip. The de
 
 The documentation for the setup python action is available [here](https://github.com/actions/setup-python)
 
+## Workflow file
+
 The '.github/workflows/python.yml' file should look like this:
 ```   
 name: Python benchmarking using pytest
