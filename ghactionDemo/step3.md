@@ -17,8 +17,16 @@ In our GitHub repository, we can find the executed action in the Actions tab in 
 
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/demo-action-screen.png?raw=true" />
 
+We should be able to see a workflow with a green checkmark and the commit message we used under 'All workflows' as seen above. If there is a yellow circle instead of a green checkmark, he actionn is still running. There should be a green checkmark if you wait a moment and refresh the page.
+
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/clicked-demo.png?raw=true" />
+
+Click the workflow to get more details regarding its execution. We should be able to see information such as status and total duration like the image above.
 
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/demo-action-result.png?raw=true" />
 
+Click 'pytest-benchmarking' to get more detailed information of each step in the workflow as seen in the image above.
+
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/demo-action-result-clicked.png?raw=true" />
+
+Click the 'Installing and running pytest' step to get the workflow output in the GitHub workflow terminal as seen in the image above. The workflow has succeeded if you can see "Hello you're running the action on a commit, seeing this message means that everything until now seems to work!" in the output. In the image above, you can find the message on line 42.
