@@ -127,3 +127,13 @@ jobs:
                                 if [ -f requirements.txt ]; 
                                 then pip install -r requirements.txt; fi
                                 python test.py
+```   
+
+# Push Changes to GitHub Repository
+
+We can now push all the changes we have made in the local repository to the remote by running the following in the terminal:
+```   
+git add .
+git commit -m 'Add initial GitHub action'
+git push
+```   
