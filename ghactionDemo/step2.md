@@ -74,10 +74,10 @@ Step 2: Set up Python environment and run script
 
 `python -m pip install --upgrade pip` Updates pip to the latest version in our environment. Pip is a package installer for Python.
 
-```
+`
  if [ -f requirements.txt ]; 
  then pip install -r requirements.txt; fi
-```
+`
 These commands install the dependencies we need for our action using pip. The dependencies are defined in he requirements.txt file which we will create later.
 
 The full documentation is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
