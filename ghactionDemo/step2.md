@@ -1,7 +1,6 @@
 # Setting up an initial action to test the workflow
 <img src="images/tut_part1.PNG" width="600" height="400" />
 For our initial setup, we are gonna create a simple "Hello World" action. We accomplish this by creating a Python file by running the following commands in the terminal:
->>>>>>> 070e9b96917faac867f5431a8648cb3f08f4e0d7
 
 `cat <<EOM> test.py`
 
@@ -57,13 +56,24 @@ jobs:
                 python data/generate_output.py
 
 ```
+Step 1: Check-out GitHub repository
 `uses: actions/checkout@v2` is an action that checks-out our repository under $GITHUB_WORKSPACE, so our workflow can access it.
 
-`persist-credentials: false` We need a GitHub auth token to enables our scripts to run authenticated git commands. This auth token is removed during post-job clean up by default. This command allows us to opt-out of this so that our auth token is persistent.
+`persist-credentials: false` We need a GitHub auth token to enable our scripts to run authenticated git commands. This auth token is removed during post-job clean up by default. This command allows us to opt-out of this so that our auth token is persistent.
 
 `fetch-depth: 0` By default, only a single commit is fetched. This command allows us to fetch all history for all branches and tags.
 
-The documentation for he checkout action is available [here](https://github.com/actions/checkout)
+The documentation for the checkout action is available [here](https://github.com/actions/checkout)
+
+Step 2: Set up Python environment and run script
+
+`uses: actions/setup-python@v1` is an action that sets up a Python environment that we can use for our action. It gives us the ability to download, install and set up Python packages.
+
+`pwd` Prints the current working directory
+
+`python -m pip install --upgrade pip` 
 
 
+
+`
 The full documentation is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
