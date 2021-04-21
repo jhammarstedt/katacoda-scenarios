@@ -85,6 +85,8 @@ with open("docs/index.html",'w') as f:
 
 ```
 
+The 'data/generate_output.py' script formats the json file we get when running pytest. It presents the results in an html file using tables. 
+
 
 
 ```   
