@@ -8,4 +8,4 @@ git commit -m 'Made trivial change to the code'
 git push
 ```   
 
-We will then go to our remote repo at`https://github.com/INSERT_GITHUB_USERNAME/Benchmark_Tutorial `using our preferred web browser.
+We will then go to our remote repo at`https://github.com/INSERT_GITHUB_USERNAME/Benchmark_Tutorial `using our preferred web browser( Note: Insert your GitHub username into the url).
