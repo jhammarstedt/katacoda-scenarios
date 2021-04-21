@@ -1,5 +1,5 @@
 # Setting up an initial action to test the workflow
-<img src="images/tut_part1.PNG" width="600" height="400" />
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/tut_part1.PNG?raw=true" height="400" />
 
 ## Initial Set Up
 For our initial setup, we are gonna create a simple "Hello World" action. We accomplish this by creating a Python file by running the following commands in the terminal:
