@@ -57,6 +57,7 @@ jobs:
 
 ```
 Step 1: Check-out GitHub repository
+
 `uses: actions/checkout@v2` is an action that checks-out our repository under $GITHUB_WORKSPACE, so our workflow can access it.
 
 `persist-credentials: false` We need a GitHub auth token to enable our scripts to run authenticated git commands. This auth token is removed during post-job clean up by default. This command allows us to opt-out of this so that our auth token is persistent.
@@ -71,9 +72,12 @@ Step 2: Set up Python environment and run script
 
 `pwd` Prints the current working directory
 
-`python -m pip install --upgrade pip` 
+`python -m pip install --upgrade pip` Updates pip to the latest version in our environment. Pip is a package installer for Python.
 
+```
+ if [ -f requirements.txt ]; 
+ then pip install -r requirements.txt; fi
+```
+These commands install the dependencies we need for our action using pip. The dependencies are defined in he requirements.txt file which we will create later.
 
-
-`
 The full documentation is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
