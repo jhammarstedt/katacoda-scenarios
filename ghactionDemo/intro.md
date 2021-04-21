@@ -13,8 +13,8 @@ At the completion of this tutorial you'll be able to:
 2. Create your first Github Page that will display the results from your testing
 ## Overview of the framework
 Below is an image of what you'll create today.
-<img src="images/framework.PNG" width="700" height="500" />
 
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/framework.PNG?raw=true" width="700" height="500" />
 
 Don't worry if this seems hard to understand now, we'll break it down step by step!
 ## Requirements and prerequisits 
