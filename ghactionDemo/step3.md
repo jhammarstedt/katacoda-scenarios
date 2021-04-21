@@ -13,3 +13,12 @@ We will then go to our remote repo at`https://github.com/INSERT_GITHUB_USERNAME/
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/github-action-bar.png?raw=true" />
 
 In our GitHub repository, we can find the executed action in the Actions tab in the navigation bar as seen above. Enter the Actions page by clicking the Action tab.
+
+
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/demo-action-screen.png?raw=true" />
+
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/clicked-demo.png?raw=true" />
+
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/demo-action-result.png?raw=true" />
+
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/demo-action-result-clicked.png?raw=true" />
