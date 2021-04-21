@@ -4,32 +4,24 @@
 ## Initial Set Up
 For our initial setup, we are gonna create a simple "Hello World" action. We accomplish this by creating a Python file by running the following commands in the terminal:
 
-`cat <<EOM> test.py`
+```
+cat <<EOM> test.py
+print("Hello you're running the action on a commit, seeing this message means that everything until now seems to work!")
+EOM
+```{{execute}}
 
-> `print("Hello you're running the action on a commit, seeing this message means that everything until now seems to work!")`
- 
->`EOM`
-
-We also need to define the Python dependencies required for our action by running the following command in the terminal:
-``` touch requirements.txt```
-
-Then edit the 'requirements.txt' file using your favorite text editor by inserting the following into the file:
-<pre class="file" data-target="clipboard">
-py==1.8.0
-pytest==5.2.4
-pytest-benchmark==3.2.2
-beautifulsoup4==4.9.3
-</pre>
 ## Prepare Github Action
+
 To execute GitHub Actions, a '.github/workflows' directory is required in the repository to execute the action. We create the '.github/workflows' directory in our repository running the following commands in the terminal:
 
-`mkdir .github`
-
-`mkdir .github/workflows`
+```
+mkdir .github
+mkdir .github/workflows
+```{{execute}}
 
 The actions are executed from a YML file in 'workflows/' directory. We therefore need to create our own workflow file by running:
 
-``` touch .github/workflows/python.yml```
+``` touch .github/workflows/python.yml```{{execute}}
 
 Then edit the '.github/workflows/python.yml' a text editor by inserting the following into the file:
 ```
