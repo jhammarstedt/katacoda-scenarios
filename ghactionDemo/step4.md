@@ -7,13 +7,6 @@
 ```   
 
 
-```   
-                        - uses: actions/checkout@v2
-                          with:
-                                persist-credentials: false
-                                fetch-depth: 0 
-```
-
 ```
                         - uses: actions/setup-python@v1
                         - name: Installing and running pytest
