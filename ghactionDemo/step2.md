@@ -38,6 +38,8 @@ jobs:
 
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
 
+The full documentation for workflow syntax is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
+
 ```
  steps:
         - uses: actions/checkout@v2
@@ -52,8 +54,6 @@ jobs:
                 if [ -f requirements.txt ]; 
                 then pip install -r requirements.txt; fi
                 python test.py
-                pytest benchmarking.py --benchmark-json output.json
-                python data/generate_output.py
 
 ```
 Step 1: Check-out GitHub repository
@@ -78,6 +78,9 @@ Step 2: Set up Python environment and run script
  if [ -f requirements.txt ]; 
  then pip install -r requirements.txt; fi
 `
-These commands install the dependencies we need for our action using pip. The dependencies are defined in he requirements.txt file which we will create later.
+These commands install the dependencies we need for our action using pip. The dependencies are defined in the requirements.txt file which we will create later.
 
-The full documentation is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
+
+
+The documentation for the setup python action is available [here](https://github.com/actions/setup-python)
+
