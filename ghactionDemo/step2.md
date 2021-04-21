@@ -34,7 +34,7 @@ jobs:
 
 `jobs` A workflow run is made up of jobs, but in the action only one is required so we won't need to distinguish between having multiple. We then specify the name of the job as `pytest-benchmarking`. 
 
-`runs-on` is the type of machine to run the job on, which in this case will be Ubuntu.
+`runs-on` is the type of machine to run the job on, which in this case will be the latest version of Ubuntu.
 
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
 
@@ -56,9 +56,13 @@ jobs:
                 python data/generate_output.py
 
 ```
-Uses...... (continue here)
+`uses: actions/checkout@v2` is an action that checks-out our repository under $GITHUB_WORKSPACE, so our workflow can access it.
 
+`persist-credentials: false` We need a GitHub auth token to enables our scripts to run authenticated git commands. This auth token is removed during post-job clean up by default. This command allows us to opt-out of this so that our auth token is persistent.
 
+`fetch-depth: 0` By default, only a single commit is fetched. This command allows us to fetch all history for all branches and tags.
+
+The documentation for he checkout action is available [here](https://github.com/actions/checkout)
 
 
 The full documentation is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
