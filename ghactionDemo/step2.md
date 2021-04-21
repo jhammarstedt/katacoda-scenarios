@@ -1,7 +1,7 @@
 # Setting up an initial action to test the workflow
 <img src="images/tut_part1.PNG" width="600" height="400" />
 
-# Initial Set Up
+## Initial Set Up
 For our initial setup, we are gonna create a simple "Hello World" action. We accomplish this by creating a Python file by running the following commands in the terminal:
 
 `cat <<EOM> test.py`
@@ -21,7 +21,7 @@ pytest-benchmark==3.2.2
 beautifulsoup4==4.9.3
 ```
 
-# Prepare Github Action
+## Prepare Github Action
 To execute GitHub Actions, a '.github/workflows' directory is required in the repository to execute the action. We create the '.github/workflows' directory in our repository running the following commands in the terminal:
 
 `mkdir .github`
@@ -43,7 +43,7 @@ jobs:
                 steps:
 ```
 
-## Jobs
+### Jobs
 
 `name` is the name of our workflow which is displayed in the actions page on GitHub
 
@@ -55,7 +55,7 @@ jobs:
 
 The full documentation for workflow syntax is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
 
-## Steps
+### Steps
 
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
 
@@ -76,7 +76,7 @@ The full documentation for workflow syntax is available [here](https://docs.gith
                 python test.py
 
 ```
-### Step 1: Check-out GitHub repository
+#### Step 1: Check-out GitHub repository
 
 `uses: actions/checkout@v2` is an action that checks-out our repository under $GITHUB_WORKSPACE, so our workflow can access it.
 
@@ -86,7 +86,7 @@ The full documentation for workflow syntax is available [here](https://docs.gith
 
 The documentation for the checkout action is available [here](https://github.com/actions/checkout)
 
-### Step 2: Set up Python environment and run test script
+#### Step 2: Set up Python environment and run test script
 
 `uses: actions/setup-python@v1` is an action that sets up a Python environment that we can use for our action. It gives us the ability to download, install and set up Python packages.
 
@@ -104,7 +104,7 @@ These commands install the dependencies we need for our action using pip. The de
 
 The documentation for the setup python action is available [here](https://github.com/actions/setup-python)
 
-## Workflow file
+### Workflow file
 
 The '.github/workflows/python.yml' file should look like this:
 ```   
@@ -129,7 +129,7 @@ jobs:
                                 python test.py
 ```   
 
-# Push Changes to GitHub Repository
+## Push Changes to GitHub Repository
 
 We can now push all the changes we have made in the local repository to the remote by running the following in the terminal:
 ```   
