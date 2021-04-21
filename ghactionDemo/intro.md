@@ -7,7 +7,7 @@ This tutorial will also introduce [Github Pages](https://pages.github.com/) whic
 ## Learning outcomes
 At the completion of this tutorial you'll be able to:
 
-1. Create simple Github Action that will let you test and compare python scripts on pushes to your github repository
+1. Create simple Github Action that will let you test and compare python scripts on pushes to your GitHub repository
     * With a few modifications you can also implement them for other tasks to enable CI/CD in your other projects! (Pretty cool right!)
     * With some modifications, you can also use this action with similar performance tools for other programming languages.
 2. Create your first Github Page that will display the results from your testing
