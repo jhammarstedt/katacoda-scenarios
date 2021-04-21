@@ -36,9 +36,10 @@ jobs:
 
 `runs-on` is the type of machine to run the job on, which in this case will be the latest version of Ubuntu.
 
+The full documentation for workflow syntax is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
+
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
 
-The full documentation for workflow syntax is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
 
 ```
  steps:
@@ -80,7 +81,7 @@ Step 2: Set up Python environment and run script
 `
 These commands install the dependencies we need for our action using pip. The dependencies are defined in the requirements.txt file which we will create later.
 
-
+`python test.py` This command will run a simple Python script that prints out a message.
 
 The documentation for the setup python action is available [here](https://github.com/actions/setup-python)
 
