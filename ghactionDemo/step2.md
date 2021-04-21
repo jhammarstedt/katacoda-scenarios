@@ -14,13 +14,14 @@ We also need to define the Python dependencies required for our action by runnin
 ``` touch requirements.txt```
 
 Then edit the 'requirements.txt' file using your favorite text editor by inserting the following into the file:
+<pre class="file" data-target="clipboard">
 ``` 
 py==1.8.0
 pytest==5.2.4
 pytest-benchmark==3.2.2
 beautifulsoup4==4.9.3
 ```
-
+</pre>
 ## Prepare Github Action
 To execute GitHub Actions, a '.github/workflows' directory is required in the repository to execute the action. We create the '.github/workflows' directory in our repository running the following commands in the terminal:
 
