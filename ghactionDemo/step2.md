@@ -1,6 +1,6 @@
 # Setting up an initial action to test the workflow
 <img src="images/tut_part1.PNG" width="600" height="400" />
-We're gonna start with a "Hello World" action to get set up, create a python file by running:
+For our initial setup, we are gonna create a simple "Hello World" action. We accomplish this by creating a Python file by running the following commands in the terminal:
 
 `cat <<EOM> test.py`
 
@@ -8,17 +8,17 @@ We're gonna start with a "Hello World" action to get set up, create a python fil
  
 >`EOM`
 
-Github Actions are excecuted in the .github/workflows of our repo folder so first off we we need to create these:
+To execute GitHub Actions, a '.github/workflows' directory is required in the repository to execute the action. We create the '.github/workflows' directory in our repository running the following commands in the terminal:
 
 `mkdir .github`
 
 `mkdir .github/workflows`
 
-The actions are executed from a YML file in workflows/ directory. Therefore we will create our workflow file:
+The actions are executed from a YML file in 'workflows/' directory. We therefore need to create our own workflow file by running:
 
 ``` touch .github/workflows/python.yml```
 
-Then open your favorite text editor and start writing the file:
+Then edit the '.github/workflows/python.yml' file using your favorite text editor by inserting the following into the file:
 ```
 name: Python benchmarking using pytest
 on: push
@@ -28,13 +28,13 @@ jobs:
                 runs-on: ubuntu-latest
                 steps:
 ```
-`name` is the name of our workflows which is displayed in the actions page on github
+`name` is the name of our workflow which is displayed in the actions page on GitHub
 
-`on` is the name of the Github event that triggers the workflow, in our case on a <ins>push</ins>.
+`on` is the name of the GitHub event that triggers the workflow. In our case, the workflow will be triggered on a <ins>push</ins> to the repository.
 
 `jobs` A workflow run is made up of jobs, but in the action only one is required so we won't need to distinguish between having multiple. We then specify the name of the job as `pytest-benchmarking`. 
 
-`runs-on` is the type of machine to run the job on, which in this case will be ubuntu.
+`runs-on` is the type of machine to run the job on, which in this case will be Ubuntu.
 
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
 
