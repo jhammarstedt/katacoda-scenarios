@@ -10,4 +10,4 @@ git push
 
 We will then go to our remote repo at`https://github.com/INSERT_GITHUB_USERNAME/Benchmark_Tutorial `using our preferred web browser( Note: Insert your GitHub username into the url).
 
-<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/github-action-bar.png?raw=true" height="400" />
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/github-action-bar.png?raw=true" />
