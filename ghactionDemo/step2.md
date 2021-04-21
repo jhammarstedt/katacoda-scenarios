@@ -6,7 +6,7 @@ For our initial setup, we are gonna create a simple "Hello World" action. We acc
 
 `cat <<EOM> test.py`
 
-> `print("Hello you're running your first action on a commit!")`
+> `print("Hello you're running the action on a commit, seeing this message means that everything until now seems to work!")`
  
 >`EOM`
 
