@@ -87,7 +87,7 @@ with open("docs/index.html",'w') as f:
 
 The 'data/generate_output.py' script formats the json file we get when running pytest. It presents the results in an html file using tables. 
 
-
+We have to add the benchmarking and formatting scripts to our GitHub action. Open the '.github/workflows/python.yml' file using a text editor and insert the following code below the last line:
 
 ```   
                 pytest benchmarking.py --benchmark-json output.json
@@ -95,27 +95,12 @@ The 'data/generate_output.py' script formats the json file we get when running p
 
 ```   
 
-
-
-
-```
-                        - uses: actions/setup-python@v1
-                        - name: Installing and running pytest
-                          run: |
-                                pwd
-                                python -m pip install --upgrade pip
-                                if [ -f requirements.txt ]; 
-                                then pip install -r requirements.txt; fi
-                                python test.py
-                                pytest benchmarking.py --benchmark-json output.json
-                                python data/generate_output.py
-```
-
+This code will run the pytest benchmarking tool on the 'benchmarking.py' script and the resuls will be stored in the 'output.json' file. The 'data/generate_output.py' will then format the results stored in 'output.json' and store it in the 'index.html' file. 
 
 
 
                                 
-Your file should look like this:
+Your '.github/workflows/python.yml' file should now look like this:
 
 ```   
 name: Python benchmarking using pytest
