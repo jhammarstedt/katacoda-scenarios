@@ -10,7 +10,7 @@ For our initial setup, we are gonna create a simple "Hello World" action. We acc
  
 >`EOM`
 
-We also need to define the Python dependencies required for our action by running:
+We also need to define the Python dependencies required for our action by running the following command in the terminal:
 ``` touch requirements.txt```
 
 Then edit the 'requirements.txt' file using your favorite text editor by inserting the following into the file:
@@ -42,6 +42,9 @@ jobs:
                 runs-on: ubuntu-latest
                 steps:
 ```
+
+## Jobs
+
 `name` is the name of our workflow which is displayed in the actions page on GitHub
 
 `on` is the name of the GitHub event that triggers the workflow. In our case, the workflow will be triggered on a <ins>push</ins> to the repository.
@@ -51,6 +54,8 @@ jobs:
 `runs-on` is the type of machine to run the job on, which in this case will be the latest version of Ubuntu.
 
 The full documentation for workflow syntax is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
+
+## Steps
 
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
 
