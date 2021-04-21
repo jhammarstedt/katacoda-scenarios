@@ -1,5 +1,7 @@
 # Setting up an initial action to test the workflow
 <img src="images/tut_part1.PNG" width="600" height="400" />
+
+# Initial Set Up
 For our initial setup, we are gonna create a simple "Hello World" action. We accomplish this by creating a Python file by running the following commands in the terminal:
 
 `cat <<EOM> test.py`
@@ -19,6 +21,7 @@ pytest-benchmark==3.2.2
 beautifulsoup4==4.9.3
 ```
 
+# Prepare Github Action
 To execute GitHub Actions, a '.github/workflows' directory is required in the repository to execute the action. We create the '.github/workflows' directory in our repository running the following commands in the terminal:
 
 `mkdir .github`
