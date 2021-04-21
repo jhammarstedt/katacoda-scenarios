@@ -1,5 +1,10 @@
 # testing
 
+```   
+                pytest benchmarking.py --benchmark-json output.json
+                python data/generate_output.py
+
+```   
 
 
 ```   
