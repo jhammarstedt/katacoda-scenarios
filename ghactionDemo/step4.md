@@ -13,7 +13,7 @@ To run the pytest benchmarking tool, we need a Python script to benchmark and an
    
 We then insert the following code into 'benchmarking.py' using a text editor:
 
-``` 
+``` {{copy}}
 import pytest
 import time
 
@@ -36,12 +36,12 @@ def cheetah(n=1000000):
     
 def test_case(benchmark):
     benchmark(turtle)
-```{{copy}}
+```
 
 This Python script contains several functions that can be used for the performance test. We then need to insert the following code into the 'data/generate_output.py' script:
 
 
-```   
+```{{copy}}   
 import json
 from bs4 import BeautifulSoup
 import os
@@ -86,17 +86,17 @@ with open("docs/index.html",'w') as f:
       f.write(new_html)
       f.close()
 
-```{{copy}}
+```
 
 The 'data/generate_output.py' script formats the json file we get when running pytest. It presents the results in an html file using tables. 
 
 We have to add the benchmarking and formatting scripts to our GitHub action. Open the '.github/workflows/python.yml' file using a text editor and insert the following code below the last line:
 
-```   
+```{{copy}} 
                 pytest benchmarking.py --benchmark-json output.json
                 python data/generate_output.py
 
-```{{copy}}   
+```   
 
 This code will run the pytest benchmarking tool on the 'benchmarking.py' script and the results will be stored in the 'output.json' file. The 'data/generate_output.py' will then format the results stored in 'output.json' and store it in the 'index.html' file. 
 
@@ -105,7 +105,7 @@ This code will run the pytest benchmarking tool on the 'benchmarking.py' script 
                                 
 Your '.github/workflows/python.yml' file should now look like this:
 
-```   
+```{{copy}}   
 name: Python benchmarking using pytest
 on: push
 jobs:
@@ -127,5 +127,5 @@ jobs:
                                 python test.py
                                 pytest benchmarking.py --benchmark-json output.json
                                 python data/generate_output.py
-```{{copy}} 
+```
 
