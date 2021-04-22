@@ -11,6 +11,8 @@ In the previous slide, we stored the benchmarking results locally in the 'index.
                                git commit -m "Add new data" -a
 ```
 
+This code adds all the changed files from the benchmarking script and commits them using the message "Add new data". We configure our GitHub so that a bot makes the commit using the commands ` git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"` and ` git config --local user.name "github-actions[bot]"`.
+
 
 
 ```
