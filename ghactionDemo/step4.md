@@ -1,5 +1,9 @@
 # Running the Pytest benchmarking tool
 
+
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/tut_part2.PNG?raw=true" height="400" />
+
+
 To run the pytest benchmarking tool, we need a Python script to benchmark and another one to format the output from pytest. We create a Python script by running the following commands in the terminal:
 
 ``` 
