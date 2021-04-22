@@ -95,7 +95,7 @@ We have to add the benchmarking and formatting scripts to our GitHub action. Ope
 
 ```   
 
-This code will run the pytest benchmarking tool on the 'benchmarking.py' script and the resuls will be stored in the 'output.json' file. The 'data/generate_output.py' will then format the results stored in 'output.json' and store it in the 'index.html' file. 
+This code will run the pytest benchmarking tool on the 'benchmarking.py' script and the results will be stored in the 'output.json' file. The 'data/generate_output.py' will then format the results stored in 'output.json' and store it in the 'index.html' file. 
 
 
 
