@@ -1,6 +1,6 @@
-# testing
+# Committing and Pushing Changes to GitHub Repository
 
-
+In the previous slide, we stored the benchmarking results locally in the 'index.html' file. We want to store the results in the remote GitHub repository so that the benchmarking results are persistent and available to other repository contributers. Using a text editor, open the '.github/workflows/python.yml' file and insert the following at the botom of the steps section:
 
 ```
                         - name: Commit files
