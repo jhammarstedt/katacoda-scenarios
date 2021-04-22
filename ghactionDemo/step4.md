@@ -36,7 +36,7 @@ def cheetah(n=1000000):
     
 def test_case(benchmark):
     benchmark(turtle)
-``` 
+```{{copy}}
 
 This Python script contains several functions that can be used for the performance test. We then need to insert the following code into the 'data/generate_output.py' script:
 
@@ -86,7 +86,7 @@ with open("docs/index.html",'w') as f:
       f.write(new_html)
       f.close()
 
-```
+```{{copy}}
 
 The 'data/generate_output.py' script formats the json file we get when running pytest. It presents the results in an html file using tables. 
 
@@ -96,7 +96,7 @@ We have to add the benchmarking and formatting scripts to our GitHub action. Ope
                 pytest benchmarking.py --benchmark-json output.json
                 python data/generate_output.py
 
-```   
+```{{copy}}   
 
 This code will run the pytest benchmarking tool on the 'benchmarking.py' script and the results will be stored in the 'output.json' file. The 'data/generate_output.py' will then format the results stored in 'output.json' and store it in the 'index.html' file. 
 
@@ -127,5 +127,5 @@ jobs:
                                 python test.py
                                 pytest benchmarking.py --benchmark-json output.json
                                 python data/generate_output.py
-``` 
+```{{copy}} 
 
