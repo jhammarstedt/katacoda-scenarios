@@ -14,6 +14,8 @@ In the previous slide, we stored the benchmarking results locally in the 'index.
 This code adds all the changed files from the benchmarking script and commits them using the message "Add new data". We configure our GitHub so that a bot makes the commit using the commands ` git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"` and ` git config --local user.name "github-actions[bot]"`.
 
 
+We need to push the committed changes to the remote repository. We do that by inserting the following code directly after the code we used for committing:
+
 
 ```
                         - name: Push changes
@@ -24,9 +26,15 @@ This code adds all the changed files from the benchmarking script and commits th
 ```
 
 
+`uses: ad-m/github-push-action@master` This is a GitHub action for pushing local changes to a GitHub repository using GitHub token.
+
+`github_token: ${{ secrets.GITHUB_TOKEN }}` This is the GitHub token used for pushing. The token can be passed as  ${{ secrets.GITHUB_TOKEN }}.
+
+`branch: ${{ github.ref }}` This specifies the destination branch that we are pushing our changes to.
 
 
-The full file will look like this:
+Our '.github/workflows/python.yml' file should now look like this:
+
 ```   
 name: Python benchmarking using pytest
 on: push
