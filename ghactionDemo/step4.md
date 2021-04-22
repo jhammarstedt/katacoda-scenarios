@@ -6,12 +6,11 @@
 
 To run the pytest benchmarking tool, we need a Python script to benchmark and another one to format the output from pytest. We create a Python script by running the following commands in the terminal:
 
-``` 
-touch benchmarking.py
-touch data/generate_output.py
+ 
+`touch benchmarking.py`{{execute}}
 
-```   
-
+`touch data/generate_output.py`{{execute}}
+   
 We then insert the following code into 'benchmarking.py' using a text editor:
 
 ``` 
