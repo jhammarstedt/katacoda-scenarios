@@ -10,7 +10,7 @@ To run the pytest benchmarking tool, we need a Python script to benchmark and an
 
 We then insert the following code into 'benchmarking.py' using a text editor:
 
-```
+```{{copy}}
 import pytest
 
 # Here are some example functions to run, can of course be replaced by your own to test things out
@@ -45,7 +45,7 @@ Now we have our
 We then need to insert the following code into the 'src/generate_output.py' script:
 
 
-```   
+```{{copy}}
 import json
 from bs4 import BeautifulSoup
 import os
