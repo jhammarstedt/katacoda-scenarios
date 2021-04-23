@@ -52,7 +52,7 @@
       "dashboards":[
         {"name": "GitHub", "href": "https://github.com/jhammarstedt/Benchmarking-DevOps"}
       ],
-    "hideHiddenFiles": true
+    "hideHiddenFiles": false
     
 
 },

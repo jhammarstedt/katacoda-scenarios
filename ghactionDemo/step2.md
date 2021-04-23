@@ -2,10 +2,16 @@
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/tut_part1.PNG?raw=true" height="400" />
 
 ## Initial Set Up
-For our initial setup, we are gonna create a simple "Hello World" action. We accomplish this by creating a Python file by running the following commands in the terminal:
+For our initial setup, we are gonna create a simple "Hello World" action. 
+We accomplish this by creating a Python file by running the following commands in the terminal:
 
+Create a src folder
+
+`mkdir src`
+
+Then write a simple python file:
 ```
-cat <<EOM> test.py
+cat <<EOM> src/test.py
 print("Hello you're running the action on a commit, seeing this message means that everything until now seems to work!")
 EOM
 ```{{execute}}
