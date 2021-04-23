@@ -1,5 +1,5 @@
 
-### Steps
+# Adding Steps to GitHub Action
 
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
 <pre class="file" data-filename=".github/workflows/python.yml" data-target="append">
