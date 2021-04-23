@@ -2,8 +2,7 @@
 # Adding Steps to GitHub Action
 
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
-<pre class="file" data-filename=".github/workflows/python.yml" data-target="append">
-<code class="yml">
+```
         - uses: actions/checkout@v2
             with:
                 persist-credentials: false
@@ -16,8 +15,7 @@
                 if [ -f requirements.txt ]; 
                 then pip install -r requirements.txt; fi
                 python test.py
-</code>
-</pre>
+```{{copy}}
 
 #### Step 1: Check-out GitHub repository
 
@@ -50,8 +48,7 @@ The documentation for the setup python action is available [here](https://github
 ### Workflow file
 
 The '.github/workflows/python.yml' file should look like this, if you want to make sure the formating is right you can just run this code to get the correct file:
-<pre class="file" data-filename=".github/workflows/python.yml" data-target="append">
-<code class="yml">
+```
 name: Python benchmarking using pytest
 on: push
 jobs:
@@ -71,8 +68,7 @@ jobs:
                                 if [ -f requirements.txt ]; 
                                 then pip install -r requirements.txt; fi
                                 python src/test.py
-</code>
-</pre> 
+```{{copy}}
 
 ## Push Changes to GitHub Repository
 
@@ -84,4 +80,5 @@ We can now push all the changes we have made in the local repository to the remo
 
 ` git push`{{execute}}
  
+ This will actually trigger the action right away. In the next step you'll learn where to find it!
 
