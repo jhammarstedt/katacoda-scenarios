@@ -46,17 +46,18 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal-v1",
+    "uilayout": "vscode-terminal",
     "uisettings": "bash",
-    "showdashboard":true,
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
+    "showdashboard":false,
       "dashboards":[
         {"name": "GitHub", "href": "https://github.com/jhammarstedt/Benchmarking-DevOps"}
       ],
-    "hideHiddenFiles": false
+    "hideHiddenFiles": true
     
 
 },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "vscode"
   }
 }

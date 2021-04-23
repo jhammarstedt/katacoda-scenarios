@@ -27,13 +27,14 @@ Next to the terminal you have access to the original repository if you need.
 
 We now need to upload our changes to github to be able to watch the workflow later.
 Add you personal info: 
-```git config --global user.email "you@example.com" ``` {{execute}} 
+``` git config --global user.email "you@example.com"```{{execute}} 
+
 ``` git config --global user.name "Tutorial bot"```{{execute}}
 
 1. Add the changes to your local repository: ``` git add . ```{{execute}}
 2. Commit them ``` git commit -m 'first commit' ```{{execute}}
 3. Go into Github (you can use the link provided next to the terminal).
-4. Go back to your own profile and create a new repository, for simplicity name it: ```ghactions_katacoda```{{copy}}
+4. Go back to your own profile and create a new repository, for simplicity name it: ```Benchmark_Tutorial```{{copy}}
 5. Make it public
 6. Ignore to create readme gitignore for now and just create it
 7. Copy the HTTPS link
