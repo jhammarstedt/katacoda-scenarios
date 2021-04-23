@@ -41,7 +41,7 @@ Add you personal info:
 8. Add it to your personal remote by running: 
 ```git remote add personal https://github.com/YOUR_USERNAME/Benchmark_Tutorial.git ```
 
-9. To push: In normal cases you could use your SSH key but in katacoda it's easier to take your `personal access token`, if you're not familiar how to get one just follow the steps [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
+9. To push: In normal cases you could use your SSH key but in katacoda it's easier to take your `personal access token`, if you're not familiar how to get one just follow the steps [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). Make sure to enable repo and worklfow when creating your `personal access token`.
 10. Use the copied personal access token and push
     * ``` git push -u personal```{{execute}}
     * enter your username and then paste in your access token as password
