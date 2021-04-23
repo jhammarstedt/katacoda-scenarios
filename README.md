@@ -1,10 +1,5 @@
 # Interactive Katacoda Scenarios
 
-[![](http://shields.katacoda.com/katacoda/jhamm/count.svg)](https://www.katacoda.com/jhamm "Get your profile on Katacoda.com")
+This repo contains interactive tutorials in katacoda. 
 
-Visit https://www.katacoda.com/jhamm to view the profile and interactive scenarios
-
-### Writing Scenarios
-Visit https://www.katacoda.com/docs to learn more about creating Katacoda scenarios
-
-For examples, visit https://github.com/katacoda/scenario-example
+Feel free to try my first one available [here](https://www.katacoda.com/jhamm) 🛠
