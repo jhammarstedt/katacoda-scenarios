@@ -4,17 +4,17 @@
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
 ```
         - uses: actions/checkout@v2
-            with:
-                persist-credentials: false
-                fetch-depth: 0 
+        with:
+           persist-credentials: false
+           fetch-depth: 0 
         - uses: actions/setup-python@v1
         - name: Installing and running pytest
-            run: |
-                pwd
-                python -m pip install --upgrade pip
-                if [ -f requirements.txt ]; 
-                then pip install -r requirements.txt; fi
-                python test.py
+          run: |
+            pwd
+            python -m pip install --upgrade pip
+            if [ -f requirements.txt ]; 
+            then pip install -r requirements.txt; fi
+            python test.py
 ```{{copy}}
 
 #### Step 1: Check-out GitHub repository
