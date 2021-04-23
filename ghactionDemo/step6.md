@@ -14,7 +14,11 @@ In the previous slide, we stored the benchmarking results locally in the 'index.
 </pre>
 
 
-This code adds all the changed files from the benchmarking script and commits them using the message "Add new data". We configure our GitHub so that a bot makes the commit using the commands ` git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"` and ` git config --local user.name "github-actions[bot]"`.
+This code adds all the changed files from the benchmarking script and commits them using the message "Add new data". We configure our GitHub so that a bot makes the commit using the commands 
+``` 
+git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+git config --local user.name "github-actions[bot]"
+```{{copy}}.
 
 
 We need to push the committed changes to the remote repository. We do that by inserting the following code directly after the code we used for committing:
