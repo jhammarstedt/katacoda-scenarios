@@ -10,7 +10,8 @@ To run the pytest benchmarking tool, we need a Python script to benchmark and an
 
 We then insert the following code into 'benchmarking.py' using a text editor:
 
-```
+<pre class="file" data-filename=".github/workflows/python.yml" data-target="append">
+<code class="yml">
 import pytest
 
 # Here are some example functions to run, can of course be replaced by your own to test things out
@@ -33,7 +34,9 @@ def cheetah(n=1000000):
 # This is where pytest gets called   
 def test_case(benchmark):
     benchmark(turtle)
-``` {{copy}}
+</code>
+</pre> 
+
 
 This Python script contains several functions that can be used for the performance test. The important addition is to actually pass the `benchmark` fixture to the test_case function. When then calling `benchmark()` pytest will run `benchmark(test_function)` on any function passed to it. For more info go [here](https://pypi.org/project/pytest-benchmark/)
 
@@ -45,7 +48,8 @@ Now we have our
 We then need to insert the following code into the 'src/generate_output.py' script:
 
 
-```
+<pre class="file" data-filename=".github/workflows/python.yml" data-target="append">
+<code class="yml">
 import json
 from bs4 import BeautifulSoup
 import os
@@ -89,8 +93,10 @@ new_html = soup.prettify(soup.original_encoding)
 with open("docs/index.html",'w') as f:
       f.write(new_html)
       f.close()
+</code>
+</pre> 
 
-```{{copy}}
+
 
 The 'data/generate_output.py' script formats the json file we get when running pytest. It presents the results in an html file using tables. 
 
@@ -109,7 +115,8 @@ This code will run the pytest benchmarking tool on the 'benchmarking.py' script 
                                 
 Your '.github/workflows/python.yml' file should now look like this:
 
-``` 
+<pre class="file" data-filename=".github/workflows/python.yml" data-target="append">
+<code class="yml">
 name: Python benchmarking using pytest
 on: push
 jobs:
@@ -131,7 +138,9 @@ jobs:
                                 python test.py
                                 pytest benchmarking.py --benchmark-json output.json
                                 python data/generate_output.py
-```{{copy}}
+</code>
+</pre> 
+
 
 
 
