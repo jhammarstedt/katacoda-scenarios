@@ -8,4 +8,4 @@ From this tutorial we have learnt several new things regarding GitHub actions an
 - The meaning of the different components in a GitHub action workflow.
 - How to run a GitHub action and where to find the executed action on github.com
 - What Pytest is and how it can be used in a GitHub action.
-- How to present results as GitHub Pages.
+- How to present the results as a GitHub page.
