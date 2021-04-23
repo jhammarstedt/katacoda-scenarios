@@ -4,7 +4,8 @@ Now we have an output.json file ready to be displayed. But there are still a cou
 ## Setting up github pages
 Go to settings on Github and press Pages. Press activate and just like that you have a page!
 
-INSERT IMAGE
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/pages_intro1.PNG?raw=true" />
+
 
 If nothing is specified the page will display your README.md file. In our case we want it to run the `index.html` file in `docs/`. So change the source from root to docs as shown in the image. Github pages will either by default read a index.md or index.html, which fortunate for you, is already in there. You can press the link and try to run it.
 

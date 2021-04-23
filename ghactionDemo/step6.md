@@ -5,12 +5,12 @@ The format of the output file is json and it will be stored in the workflow, in 
 ## Commit
 Begin by commiting the output file:
 ```
-                        - name: Commit files
-                          run: |
-                               git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-                               git config --local user.name "github-actions[bot]"
-                               git add .
-                               git commit -m "Add new data" -a
+- name: Commit files
+  run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add .
+        git commit -m "Add new data" -a
 
 ```{{copy}}
 

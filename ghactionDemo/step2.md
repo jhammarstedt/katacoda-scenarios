@@ -35,6 +35,8 @@ The actions are executed from a YML file in 'workflows/' directory. We therefore
 ``` touch .github/workflows/python.yml```{{execute}}
 
 Then edit the '.github/workflows/python.yml' file in the IDE, to start of we will give the workflow a name:
+(if you don't see the file right away, try to press the small `refresh explorer` button in the IDE)
+
 ```
 name: Python benchmarking using pytest
 ```{{copy}}
