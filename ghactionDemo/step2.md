@@ -7,7 +7,7 @@ We accomplish this by creating a Python file by running the following commands i
 
 Create a src folder
 
-`mkdir src`
+```mkdir src```{{execute}}
 
 Then write a simple python file:
 ```
@@ -25,11 +25,16 @@ mkdir .github
 mkdir .github/workflows
 ```{{execute}}
 
+Note that this directory is hidden, but we can still navigate through it
+
 The actions are executed from a YML file in 'workflows/' directory. We therefore need to create our own workflow file by running:
 
 ``` touch .github/workflows/python.yml```{{execute}}
 
-Then edit the '.github/workflows/python.yml' a text editor by inserting the following into the file:
+Then edit the '.github/workflows/python.yml' a text editor by inserting the following into the file (if the indenting comes out odd just widden the text field):
+
+NOTE, MIGHT NEED TO USE VIM HERE TO EDIT OR FIND SUPPORT TO DISPLAY .GITHUB FOLDER.
+
 ```
 name: Python benchmarking using pytest
 on: push
@@ -38,7 +43,7 @@ jobs:
                 name: pytest-benchmarking
                 runs-on: ubuntu-latest
                 steps:
-```
+```{{{copy}}}
 
 ### Jobs
 
@@ -72,7 +77,7 @@ The full documentation for workflow syntax is available [here](https://docs.gith
                 then pip install -r requirements.txt; fi
                 python test.py
 
-```
+```{{copy}}
 #### Step 1: Check-out GitHub repository
 
 `uses: actions/checkout@v2` is an action that checks-out our repository under $GITHUB_WORKSPACE, so our workflow can access it.
@@ -128,7 +133,8 @@ jobs:
 
 ## Push Changes to GitHub Repository
 
-We can now push all the changes we have made in the local repository to the remote by running the following in the terminal:
+We can now push all the changes we have made in the local repository to the remote on github by running the following in the terminal:
+
 ```   
 git add .
 git commit -m 'Add initial GitHub action'

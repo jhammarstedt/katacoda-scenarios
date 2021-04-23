@@ -4,8 +4,10 @@ To start of we're going to clone the project repository. Copy paste or press the
 
 `git clone https://github.com/jhammarstedt/Benchmarking-DevOps.git`{{execute}}
 
+Enter the directory `cd Benchmarking-DevOps`
+
 To give permission for all scripts we need run:
-`chmod +x scripts/clear_tutorial.sh clear_table.sh`{{execute}}
+`chmod +x scripts/clear_tutorial.sh scripts/clear_table.sh`{{execute}}
 
 This tutorial can then be done in two ways
 1. By having all the code and just follow the reading
@@ -23,9 +25,26 @@ In the scripts folder we have a script for cleaning the table which is mostly fo
 
 Next to the terminal you have access to the original repository if you need.
 
-Before you start you should 
+We now need to upload our changes to github to be able to watch the workflow later.
+1. Add the changes to your local repository: ``` git add . ```{{execute}}
+2. Commit them ``` git commit -m 'first commit```{{execute}}
+3. Go into Github (you can use the link provided next to the terminal).
+4. Go back to your own profile and create a new repository, for simplicity name it: `ghactions_katacoda`
+5. Make it public
+6. Ignore to create readme gitignore for now and just create it
+7. Copy the HTTPS link
+8. Add it to your personal remote by running: 
+    * ```git remote add personal https://github.com/YOUR_USERNAME/ghactions_katacoda.git ```
 
-So, let's get into the fun stuff!🎈
+9. To push: In normal cases you could use your SSH key but in katacoda it's easier to take your `personal access token`, if you're not familiar how to get one just follow the steps [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
+10. Use the copied personal access token and push
+    * ``` git push -u personal```
+    * enter your username and then paste in your access token as password
+11. Add you personal info: 
+```git config --global user.email "you@example.com```{{execute}}
+```git config --global user.name "Tutorial bot```{{execute}}
+
+So finally everything is set up and we're ready, let's get into the fun stuff!🎈
 
 <!--Since GitHub actions are executed on a repository, we will need to create a repository on GitHub. Fortunately we are able do most of the work from the Katacoda terminal (The Katacoda terminal will be referred to as terminal in this tutorial since we won't use a local terminal on our system).
 
