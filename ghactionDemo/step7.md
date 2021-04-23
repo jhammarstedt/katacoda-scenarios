@@ -9,9 +9,9 @@ INSERT IMAGE
 If nothing is specified the page will display your README.md file. In our case we want it to run the `index.html` file in `docs/`. So change the source from root to docs as shown in the image. Github pages will either by default read a index.md or index.html, which fortunate for you, is already in there. You can press the link and try to run it.
 
 Examining the full flowchart again:
-<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/framework.PNG?raw=true" />
+<!--<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/framework.PNG?raw=true" />-->
 
-
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/tut_2.PNG?raw=true" />
 
 
 `touch src/generate_output.py`{{execute}}
@@ -19,7 +19,8 @@ Examining the full flowchart again:
 We then need to insert the following code into the 'src/generate_output.py' script:
 
 
-```import json
+``` 
+import json
 from bs4 import BeautifulSoup
 import os
 

@@ -24,14 +24,12 @@ If you wish to go for 2. then delete the relevant scripts by runnig:
 
 `./scripts/clear_tutorial.sh`{{execute}}
 
-The docs filder contains the css and html files for the github page. Since we took the table from a prebuilt template we won't cover how to write one in html, but if you wish to still do it by yourself you can run
+The docs filder contains the css and html files for the github page. Since we took the table from a prebuilt template we won't cover how to write one in html.
 
-`rm -rf docs`
 
 In the scripts folder we have a script for cleaning the table which is mostly for conviniece.
 
-We now need to upload our changes to github to be able to watch the workflow later.
-Add you personal info: 
+We now need to upload our changes to github to be able to watch the workflow later. 
 ``` git config --global user.email "you@example.com"```{{execute}} 
 
 ``` git config --global user.name "Tutorial bot"```{{execute}}
@@ -50,6 +48,7 @@ Add you personal info:
 10. Use the copied personal access token and push
     * ``` git push -u personal```{{execute}}
     * enter your username and then paste in your access token as password
+        * note that the password will not be visible when you paste it
 
 
 So finally everything is set up and we're ready, let's get into the fun stuff!🎈

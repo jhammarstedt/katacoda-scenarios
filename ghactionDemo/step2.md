@@ -13,18 +13,20 @@ Create a src folder
 ```mkdir src```{{execute}}
 
 Then write a simple python file:
+
 ```
 cat <<EOM> src/test.py
 print("Hello you're running the action on a commit, seeing this message means that everything until now seems to work!")
-EOM
-```{{execute}}
+EOM ```{{execute}}
 
 ## Prepare Github Action
 
 To execute GitHub Actions, a '.github/workflows' directory is required in the repository to execute the action. We create the '.github/workflows' directory in our repository running the following commands in the terminal:
 
-``` mkdir .github 
-mkdir .github/workflows ```{{execute}}
+``` 
+mkdir .github 
+mkdir .github/workflows 
+```{{execute}}
 
 **Note** that this directory is hidden, but we can still navigate through it and display it by running `ls -a`{{execute}} or watch it in VScode (recommended)
 
@@ -33,11 +35,14 @@ The actions are executed from a YML file in 'workflows/' directory. We therefore
 ``` touch .github/workflows/python.yml```{{execute}}
 
 Then edit the '.github/workflows/python.yml' file in the IDE, to start of we will give the workflow a name:
-```name: Python benchmarking using pytest```{{copy}}
+```
+name: Python benchmarking using pytest
+```{{copy}}
 
 Then continue to either write yourself or copy the following code:
 
-```on: push
+```
+on: push
 jobs:
         benchmark:
                 name: pytest-benchmarking
@@ -61,7 +66,8 @@ The full documentation for workflow syntax is available [here](https://docs.gith
 ### Workflow file
 
 The '.github/workflows/python.yml' file should look like this, if you want to make sure the formating is right you can just run this code to get the correct file:
-```name: Python benchmarking using pytest
+```
+name: Python benchmarking using pytest
 on: push
 jobs:
         benchmark:

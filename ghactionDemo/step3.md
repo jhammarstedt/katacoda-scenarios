@@ -39,9 +39,12 @@ The documentation for the checkout action is available [here](https://github.com
  if [ -f requirements.txt ]; 
  then pip install -r requirements.txt; fi
 `
+
 These commands install the dependencies we need for our action using pip. The dependencies are defined in the requirements.txt file which we have already created.
 
-`python test.py` This command will run the simple test.py script that prints out a message.
+`python test.py` 
+
+This command will run the simple test.py script that prints out a message.
 
 The documentation for the setup python action is available [here](https://github.com/actions/setup-python)
 
