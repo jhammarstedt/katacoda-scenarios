@@ -18,7 +18,7 @@ To give permission for all scripts we need run:
 
 This tutorial can then be done in two ways
 1. By having all the code and just follow the reading
-2. Code along. 
+2. Code along (Recommended option!)
 
 If you wish to go for 2. then delete the relevant scripts by runnig:
 
