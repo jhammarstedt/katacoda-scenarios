@@ -47,7 +47,11 @@
   },
   "environment": {
     "uilayout": "vscode",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
+    "showdashboard":true,
+      "dashboards":[
+        {"name": "GitHub", "href": "https://github.com/jhammarstedt/Benchmarking-DevOps"}
+      ]
   },
   "backend": {
     "imageid": "vscode"

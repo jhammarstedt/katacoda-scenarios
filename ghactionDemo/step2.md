@@ -2,6 +2,9 @@
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/tut_part1.PNG?raw=true" height="400" />
 
 ## Initial Set Up
+
+** Note ** most of these steps can also be performed in the IDE but we will use the terminal for most part. Feel free to choose the approach you like the best.
+
 For our initial setup, we are gonna create a simple "Hello World" action. 
 We accomplish this by creating a Python file by running the following commands in the terminal:
 
@@ -23,7 +26,7 @@ To execute GitHub Actions, a '.github/workflows' directory is required in the re
 ``` mkdir .github 
 mkdir .github/workflows ```{{execute}}
 
-**Note** that this directory is hidden, but we can still navigate through it and display it by running `ls -a`{{execute}}
+**Note** that this directory is hidden, but we can still navigate through it and display it by running `ls -a`{{execute}} or watch it in VScode (recommended)
 
 The actions are executed from a YML file in 'workflows/' directory. We therefore need to create our own workflow file by running:
 
@@ -137,8 +140,8 @@ jobs:
 
 We can now push all the changes we have made in the local repository to the remote on github by running the following in the terminal:
 
-```   
+```
 git add .
-git commit -m 'Add initial GitHub action'
+git commit -m "Add initial GitHub action"
 git push
-```   
+```{{execute}}   
