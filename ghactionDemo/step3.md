@@ -78,10 +78,10 @@ jobs:
 
 We can now push all the changes we have made in the local repository to the remote on github by running the following in the terminal:
 
-```   
-git add .
-git commit -m 'Add initial GitHub action'
-git push
-```   
+` git add .`{{execute}}
 
+` git commit -m 'Add initial GitHub action'`{{execute}} 
+
+` git push`{{execute}}
+ 
 
