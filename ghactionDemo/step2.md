@@ -20,30 +20,31 @@ EOM
 
 To execute GitHub Actions, a '.github/workflows' directory is required in the repository to execute the action. We create the '.github/workflows' directory in our repository running the following commands in the terminal:
 
-```
-mkdir .github
-mkdir .github/workflows
-```{{execute}}
+``` mkdir .github 
+mkdir .github/workflows ```{{execute}}
 
-Note that this directory is hidden, but we can still navigate through it
+**Note** that this directory is hidden, but we can still navigate through it and display it by running `ls -a`{{execute}}
 
 The actions are executed from a YML file in 'workflows/' directory. We therefore need to create our own workflow file by running:
 
 ``` touch .github/workflows/python.yml```{{execute}}
 
-Then edit the '.github/workflows/python.yml' a text editor by inserting the following into the file (if the indenting comes out odd just widden the text field):
+Then edit the '.github/workflows/python.yml' file, press the code below to give it a name. 
 
-NOTE, MIGHT NEED TO USE VIM HERE TO EDIT OR FIND SUPPORT TO DISPLAY .GITHUB FOLDER.
+<pre class="file" data-filename=".github/workflows/python.yml" data-target="replace"><code class="yml">name: Python benchmarking using pytest</code></pre>
 
-```
-name: Python benchmarking using pytest
+Then continue to either write yourself or insert the following code:
+
+<pre class="file" data-filename=".github/workflows/python.yml" data-target="append">
+<code class="yml">
 on: push
 jobs:
         benchmark:
                 name: pytest-benchmarking
                 runs-on: ubuntu-latest
                 steps:
-```{{{copy}}}
+</code>
+</pre>
 
 ### Jobs
 
@@ -60,10 +61,8 @@ The full documentation for workflow syntax is available [here](https://docs.gith
 ### Steps
 
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
-
-
-```
- steps:
+<pre class="file" data-filename=".github/workflows/python.yml" data-target="append">
+<code class="yml">
         - uses: actions/checkout@v2
             with:
                 persist-credentials: false
@@ -76,8 +75,9 @@ The full documentation for workflow syntax is available [here](https://docs.gith
                 if [ -f requirements.txt ]; 
                 then pip install -r requirements.txt; fi
                 python test.py
+</code>
+</pre>
 
-```{{copy}}
 #### Step 1: Check-out GitHub repository
 
 `uses: actions/checkout@v2` is an action that checks-out our repository under $GITHUB_WORKSPACE, so our workflow can access it.
@@ -108,8 +108,9 @@ The documentation for the setup python action is available [here](https://github
 
 ### Workflow file
 
-The '.github/workflows/python.yml' file should look like this:
-```   
+The '.github/workflows/python.yml' file should look like this, if you want to make sure the formating is right you can just run this code to get the correct file:
+<pre class="file" data-filename=".github/workflows/python.yml" data-target="append">
+<code class="yml">
 name: Python benchmarking using pytest
 on: push
 jobs:
@@ -129,7 +130,8 @@ jobs:
                                 if [ -f requirements.txt ]; 
                                 then pip install -r requirements.txt; fi
                                 python test.py
-```   
+</code>
+</pre> 
 
 ## Push Changes to GitHub Repository
 

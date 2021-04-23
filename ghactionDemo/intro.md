@@ -11,6 +11,7 @@ At the completion of this tutorial you'll be able to:
     * With a few modifications you can also implement them for other tasks to enable CI/CD in your other projects! (Pretty cool right!)
     * With some modifications, you can also use this action with similar performance tools for other programming languages.
 2. Create your first Github Page that will display the results from your testing
+
 ## Overview of the framework
 Below is an image of what you'll create today.
 
@@ -21,6 +22,7 @@ Don't worry if this seems hard to understand now, we'll break it down step by st
 1. A GitHub account
 2. Basic knowledge of Git and Python. 
 3. Bonus: For visuals in GitHub pages we'll use HTML and CSS but since this is not the object of the tutorial you can just get a prebuilt table that we will provide. 
+
 ## So now we're ready, let's get coding!
 
 <img src="https://media.giphy.com/media/sSmxfWnEVxtWU/giphy.gif" width="300" height="300" />

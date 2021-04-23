@@ -4,7 +4,7 @@ To start of we're going to clone the project repository. Copy paste or press the
 
 `git clone https://github.com/jhammarstedt/Benchmarking-DevOps.git`{{execute}}
 
-Enter the directory `cd Benchmarking-DevOps`
+Enter the directory ```cd Benchmarking-DevOps```{{execute}}
 
 To give permission for all scripts we need run:
 `chmod +x scripts/clear_tutorial.sh scripts/clear_table.sh`{{execute}}
@@ -26,23 +26,24 @@ In the scripts folder we have a script for cleaning the table which is mostly fo
 Next to the terminal you have access to the original repository if you need.
 
 We now need to upload our changes to github to be able to watch the workflow later.
+Add you personal info: 
+``` git config --global user.email "you@example.com" git config --global user.name "Tutorial bot```{{execute}}
+
 1. Add the changes to your local repository: ``` git add . ```{{execute}}
-2. Commit them ``` git commit -m 'first commit```{{execute}}
+2. Commit them ``` git commit -m 'first commit' ```{{execute}}
 3. Go into Github (you can use the link provided next to the terminal).
-4. Go back to your own profile and create a new repository, for simplicity name it: `ghactions_katacoda`
+4. Go back to your own profile and create a new repository, for simplicity name it: ```ghactions_katacoda```{{copy}}
 5. Make it public
 6. Ignore to create readme gitignore for now and just create it
 7. Copy the HTTPS link
 8. Add it to your personal remote by running: 
-    * ```git remote add personal https://github.com/YOUR_USERNAME/ghactions_katacoda.git ```
+```git remote add personal https://github.com/YOUR_USERNAME/ghactions_katacoda.git```
 
 9. To push: In normal cases you could use your SSH key but in katacoda it's easier to take your `personal access token`, if you're not familiar how to get one just follow the steps [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
 10. Use the copied personal access token and push
-    * ``` git push -u personal```
+    * ``` git push -u personal```{{execute}}
     * enter your username and then paste in your access token as password
-11. Add you personal info: 
-```git config --global user.email "you@example.com```{{execute}}
-```git config --global user.name "Tutorial bot```{{execute}}
+
 
 So finally everything is set up and we're ready, let's get into the fun stuff!🎈
 

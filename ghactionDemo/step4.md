@@ -4,22 +4,18 @@
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/tut_part2.PNG?raw=true" height="400" />
 
 
-To run the pytest benchmarking tool, we need a Python script to benchmark and another one to format the output from pytest. We create a Python script by running the following commands in the terminal:
-
+To run the pytest benchmarking tool, we need a Python script to benchmark and another one to format the output from pytest. We start by creating the benchmarking script with the functions we wish to test:
  
-`touch benchmarking.py`{{execute}}
+`touch src/benchmarking.py`{{execute}}
 
-`touch data/generate_output.py`{{execute}}
-   
 We then insert the following code into 'benchmarking.py' using a text editor:
 
-``` {{copy}}
+```
 import pytest
-import time
 
-
+# Here are some example functions to run, can of course be replaced by your own to test things out
 def turtle(n=1000000):
-    """Regular for loop"""
+    """Regular for loops"""
     x = [] 
     for i in range(n,0,-1):
         x.append(str(i))
@@ -33,15 +29,23 @@ def cheetah(n=1000000):
     """Faster with list comprehenssion and join"""
     x = [str(i) for i in range(n,0,-1)]
     s = "".join(x)
-    
+
+# This is where pytest gets called   
 def test_case(benchmark):
     benchmark(turtle)
 ```
 
-This Python script contains several functions that can be used for the performance test. We then need to insert the following code into the 'data/generate_output.py' script:
+This Python script contains several functions that can be used for the performance test. The important addition is to actually pass the `benchmark` fixture to the test_case function. When then calling `benchmark()` pytest will run `benchmark(test_function)` on any function passed to it. For more info go [here](https://pypi.org/project/pytest-benchmark/)
+
+Now we have our 
 
 
-```{{copy}}   
+`touch src/generate_output.py`{{execute}}
+
+We then need to insert the following code into the 'src/generate_output.py' script:
+
+
+```   
 import json
 from bs4 import BeautifulSoup
 import os
