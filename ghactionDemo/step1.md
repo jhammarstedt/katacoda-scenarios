@@ -4,6 +4,9 @@ To start of we're going to clone the project repository. Copy paste or press the
 
 `git clone https://github.com/jhammarstedt/Benchmarking-DevOps.git`{{execute}}
 
+To give permission for all scripts we need run:
+`chmod +x scripts/clear_tutorial.sh clear_table.sh`{{execute}}
+
 This tutorial can then be done in two ways
 1. By having all the code and just follow the reading
 2. Code along. 
