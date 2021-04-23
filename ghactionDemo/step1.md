@@ -27,7 +27,8 @@ Next to the terminal you have access to the original repository if you need.
 
 We now need to upload our changes to github to be able to watch the workflow later.
 Add you personal info: 
-``` git config --global user.email "you@example.com" git config --global user.name "Tutorial bot```{{execute}}
+```git config --global user.email "you@example.com" ``` {{execute}} 
+``` git config --global user.name "Tutorial bot"```{{execute}}
 
 1. Add the changes to your local repository: ``` git add . ```{{execute}}
 2. Commit them ``` git commit -m 'first commit' ```{{execute}}
@@ -37,7 +38,7 @@ Add you personal info:
 6. Ignore to create readme gitignore for now and just create it
 7. Copy the HTTPS link
 8. Add it to your personal remote by running: 
-```git remote add personal https://github.com/YOUR_USERNAME/ghactions_katacoda.git```
+```git remote add personal https://github.com/YOUR_USERNAME/Benchmark_Tutorial.git ```
 
 9. To push: In normal cases you could use your SSH key but in katacoda it's easier to take your `personal access token`, if you're not familiar how to get one just follow the steps [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
 10. Use the copied personal access token and push
