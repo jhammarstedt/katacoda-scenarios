@@ -1,32 +1,87 @@
-# Running the GitHub Action
 
-We will now test the GitHub action by making a push request to our remote GitHub repository. Make a trivial change to one of the files in the repository(such as adding a space in the README). Then push the change to the remote repository by running the following commands in the terminal: 
+# Adding Steps to GitHub Action
 
-`git add .`{{execute}}
+`steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
+<pre class="file" data-filename=".github/workflows/python.yml" data-target="append">
+<code class="yml">
+        - uses: actions/checkout@v2
+            with:
+                persist-credentials: false
+                fetch-depth: 0 
+        - uses: actions/setup-python@v1
+        - name: Installing and running pytest
+            run: |
+                pwd
+                python -m pip install --upgrade pip
+                if [ -f requirements.txt ]; 
+                then pip install -r requirements.txt; fi
+                python test.py
+</code>
+</pre>
 
-`git commit -m 'Made trivial change to the code'`{{execute}}
+#### Step 1: Check-out GitHub repository
 
-`git push`{{execute}}
+`uses: actions/checkout@v2` is an action that checks-out our repository under $GITHUB_WORKSPACE, so our workflow can access it.
 
-We will then go to our remote repo at`https://github.com/INSERT_GITHUB_USERNAME/Benchmark_Tutorial `using our preferred web browser( Note: Insert your GitHub username into the url).
+`persist-credentials: false` We need a GitHub auth token to enable our scripts to run authenticated git commands. This auth token is removed during post-job clean up by default. This command allows us to opt-out of this so that our auth token is persistent.
 
-<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/github-action-bar.png?raw=true" />
+`fetch-depth: 0` By default, only a single commit is fetched. This command allows us to fetch all history for all branches and tags.
 
-In our GitHub repository, we can find the executed action in the Actions tab in the navigation bar as seen above. Enter the Actions page by clicking the Action tab.
+The documentation for the checkout action is available [here](https://github.com/actions/checkout)
 
+#### Step 2: Set up Python environment and run test script
 
-<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/demo-action-screen.png?raw=true" />
+`uses: actions/setup-python@v1` is an action that sets up a Python environment that we can use for our action. It gives us the ability to download, install and set up Python packages.
 
-We should be able to see a workflow with a green checkmark and the commit message we used under 'All workflows' as seen above. If there is a yellow circle instead of a green checkmark, he actionn is still running. There should be a green checkmark if you wait a moment and refresh the page.
+`pwd` Prints the current working directory
 
-<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/clicked-demo.png?raw=true" />
+`python -m pip install --upgrade pip` Updates pip to the latest version in our environment. Pip is a package installer for Python.
 
-Click the workflow to get more details regarding its execution. We should be able to see information such as status and total duration like the image above.
+`
+ if [ -f requirements.txt ]; 
+ then pip install -r requirements.txt; fi
+`
+These commands install the dependencies we need for our action using pip. The dependencies are defined in the requirements.txt file which we have already created.
 
-<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/demo-action-result.png?raw=true" />
+`python test.py` This command will run the simple test.py script that prints out a message.
 
-Click 'pytest-benchmarking' to get more detailed information of each step in the workflow as seen in the image above.
+The documentation for the setup python action is available [here](https://github.com/actions/setup-python)
 
-<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/demo-action-result-clicked.png?raw=true" />
+### Workflow file
 
-Click the 'Installing and running pytest' step to get the workflow output in the GitHub workflow terminal as seen in the image above. The workflow has succeeded if you can see "Hello you're running the action on a commit, seeing this message means that everything until now seems to work!" in the output. In the image above, you can find the message on line 42.
+The '.github/workflows/python.yml' file should look like this, if you want to make sure the formating is right you can just run this code to get the correct file:
+<pre class="file" data-filename=".github/workflows/python.yml" data-target="append">
+<code class="yml">
+name: Python benchmarking using pytest
+on: push
+jobs:
+        benchmark:
+                name: pytest-benchmarking
+                runs-on: ubuntu-latest
+                steps:
+                        - uses: actions/checkout@v2
+                          with:
+                                persist-credentials: false
+                                fetch-depth: 0 
+                        - uses: actions/setup-python@v1
+                        - name: Installing and running pytest
+                          run: |
+                                pwd
+                                python -m pip install --upgrade pip
+                                if [ -f requirements.txt ]; 
+                                then pip install -r requirements.txt; fi
+                                python src/test.py
+</code>
+</pre> 
+
+## Push Changes to GitHub Repository
+
+We can now push all the changes we have made in the local repository to the remote on github by running the following in the terminal:
+
+` git add .`{{execute}}
+
+` git commit -m 'Add initial GitHub action'`{{execute}} 
+
+` git push`{{execute}}
+ 
+

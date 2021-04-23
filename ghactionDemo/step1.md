@@ -1,3 +1,10 @@
+# You workspace
+In the top you can see three folders which you have access to during the tutorial
+*  A bash terminal
+* VS code IDE editor
+* Link to the original github repository
+
+
 # Setting up your GitHub repository
 
 To start of we're going to clone the project repository. Copy paste or press the button next to the code to execute it
@@ -22,8 +29,6 @@ The docs filder contains the css and html files for the github page. Since we to
 `rm -rf docs`
 
 In the scripts folder we have a script for cleaning the table which is mostly for conviniece.
-
-Next to the terminal you have access to the original repository if you need.
 
 We now need to upload our changes to github to be able to watch the workflow later.
 Add you personal info: 
