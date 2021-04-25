@@ -11,12 +11,16 @@ Your page should now be published on `https://INSERT_USERNAME.github.io/Benchmar
 If nothing is specified the page will display your README.md file. In our case we want it to run the `index.html` file in `docs/`. 
 * So change the source from root to docs as shown in the image. 
 
-Github pages will either by default read a index.md or index.html, which fortunate for you, is already in there (both the index file and the css file were just taken from this [template website](https://uicookies.com/css-table-templates/)). You can press the link and try to run it. It might be a little slow to update so if it dosen't work wait a little and refresh the page.
+Github pages will either by default read a index.md or index.html, which fortunate for you, is already in there (both the index file and the css file were just taken from this [template website](https://uicookies.com/css-table-templates/)). 
+
+You can press the link and try to run it. It might be a little slow to update so if it dosen't work wait a little and refresh the page.
 
 Examining the flowchart again:
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/framework.PNG?raw=true" />
 
-We haven't adressed the `format_output` file yet. For simplicity we will just write a python script that reads the `output.json` and edits the `index.html` by adding the new table values. For the `index.html` file we choose the include Commit, Date, Mean, Max, Min, Standard Deviation (All in ms). (The file could look odd but you can format it by right clicking and press `Format Document` while watching the file in the IDE)
+We haven't adressed the `generate_output` file yet. For simplicity we will just write a python script that reads the `output.json` and edits the `index.html` by adding the new table values. For the `index.html` file we choose the include Commit, Date, Mean, Max, Min, Standard Deviation (All in ms). 
+
+(The file could look odd but you can format it by right clicking and press `Format Document` while watching the file in the IDE)
 
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/index_prev.PNG?raw=true" />
 
@@ -83,40 +87,38 @@ python src/generate_output.py
 
 This code will run the pytest benchmarking tool on the 'benchmarking.py' script and the results will be stored in the 'output.json' file. The 'src/generate_output.py' will then format the results stored in 'output.json' and store it in the 'index.html' file. 
 
-<details> 
-  <summary>Full python.yml file available here</summary>
-  ```
-    name: Python benchmarking using pytest
-    on: push
-    jobs:
-            benchmark:
-                    name: pytest-benchmarking
-                    runs-on: ubuntu-latest
-                    steps:
-                            - uses: actions/checkout@v2
-                            with:
-                                    persist-credentials: false
-                                    fetch-depth: 0 
-                            - uses: actions/setup-python@v1
-                            - name: Installing and running pytest
-                            run: |
-                                    pwd
-                                    python -m pip install --upgrade pip
-                                    if [ -f requirements.txt ]; 
-                                    then pip install -r requirements.txt; fi
-                                    python src/test.py
-                                    pytest src/benchmarking.py --benchmark-json output.json
-                                    python src/generate_output.py
-                            - name: Commit files
-                            run: |
-                                git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-                                git config --local user.name "github-actions[bot]"
-                                git add .
-                                git commit -m "Add new data" -a
-                            - name: Push changes
-                            uses: ad-m/github-push-action@master
-                            with:
-                                    github_token: ${{ secrets.GITHUB_TOKEN }}
-                                    branch: ${{ github.ref }}
-  ```{{copy}}
-</details>
+Full python.yml file available here
+```
+name: Python benchmarking using pytest
+on: push
+jobs:
+        benchmark:
+                name: pytest-benchmarking
+                runs-on: ubuntu-latest
+                steps:
+                      - uses: actions/checkout@v2
+                        with:
+                                persist-credentials: false
+                                fetch-depth: 0 
+                      - uses: actions/setup-python@v1
+                      - name: Installing and running pytest
+                        run: |
+                                pwd
+                                python -m pip install --upgrade pip
+                                if [ -f requirements.txt ]; 
+                                then pip install -r requirements.txt; fi
+                                python src/test.py
+                                pytest src/benchmarking.py --benchmark-json output.json
+                                python src/generate_output.py
+                      - name: Commit files
+                        run: |
+                            git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                            git config --local user.name "github-actions[bot]"
+                            git add .
+                            git commit -m "Add new data" -a
+                      - name: Push changes
+                        uses: ad-m/github-push-action@master
+                        with:
+                                github_token: ${{ secrets.GITHUB_TOKEN }}
+                                branch: ${{ github.ref }}
+```{{copy}}

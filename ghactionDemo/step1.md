@@ -14,7 +14,7 @@ To start of we're going to clone the project repository. Copy paste or press the
 Enter the directory ```cd Benchmarking-DevOps```{{execute}}
 
 To give permission for all scripts we need run:
-`chmod +x scripts/clear_tutorial.sh scripts/clear_table.sh`{{execute}}
+`chmod +x scripts/clear_tutorial.sh scripts/clear_table.sh scripts/collectEgg.sh`{{execute}}
 
 This tutorial can then be done in two ways
 1. By having all the code and just follow the reading

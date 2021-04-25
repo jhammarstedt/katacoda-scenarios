@@ -16,8 +16,9 @@ Begin by commiting the output file:
 
 This code adds all the changed files from the benchmarking script and commits them using the message "Add new data". We configure our GitHub so that a bot makes the commit using the commands. 
 
-git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-git config --local user.name "github-actions[bot]".
+`git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"`
+
+`git config --local user.name "github-actions[bot]"`
 
 ## Push
 We need to push the committed changes to the remote repository. We do that by inserting the following code directly after the code we used for committing:
@@ -39,6 +40,9 @@ We need to push the committed changes to the remote repository. We do that by in
 
 Our '.github/workflows/python.yml' file should now look like this:
 
+
+<details> 
+  <summary>The current python.yml file is available here</summary>
 ```
 name: Python benchmarking using pytest
 on: push
@@ -72,7 +76,7 @@ jobs:
                                 github_token: ${{ secrets.GITHUB_TOKEN }}
                                 branch: ${{ github.ref }} 
 ```{{copy}}
-
+</details> 
 If you do another commit and push you should be able to see the output.json file in your repository after the Action has executed successfully. 
 
 (A tip could be to change the benchmark function to `benchmark(cheetah)` instead and see the performance on the faster code)
