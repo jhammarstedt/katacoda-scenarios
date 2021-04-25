@@ -23,8 +23,9 @@ Don't worry if this seems hard to understand now, we'll break it down step by st
 2. Basic knowledge of Git and Python. 
 3. Bonus: For visuals in GitHub pages we'll use HTML and CSS but since this is not the object of the tutorial you can just get a prebuilt table that we will provide. 
 
+If the environment takes too long just refresh the page and try again. 
 ## So now we're ready, let's get coding!
-(This tutorial might require a **shovel** )
+(Remember to bring a **shovel** )
 
 
 <img src="https://media.giphy.com/media/sSmxfWnEVxtWU/giphy.gif" width="300" height="300" />
