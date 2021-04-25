@@ -1,13 +1,13 @@
-# Handling the data and display it with Github Pages
-Now we have an output.json file ready to be displayed. But there are still a couple of issues here. The output file will be overwritten every time and we don't really have a way to display the history and compare the results. One could solve this in multiple ways by simply saving data from the output file in another file, but we will utulize github pages to display some selected statistics in a table. 
+# Handling the data and display it with GitHub Pages
+Now we have an 'output.json' file ready to be displayed. But there are still a couple of issues here. The output file will be overwritten every time and we do not really have a way to display the history and compare the results. One could solve this in multiple ways by simply saving data from the output file in another file, but we will utulize GitHub Pages to display some selected statistics in a table. 
 
-## Setting up github pages
-Go to settings on Github and press Pages. Press activate and just like that you have a page!
+## Setting up GitHub Pages
+Go to settings on GitHub and press Pages. Press activate and just like that you have a page!
 
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/pages_intro1.PNG?raw=true" />
 
 
-If nothing is specified the page will display your README.md file. In our case we want it to run the `index.html` file in `docs/`. So change the source from root to docs as shown in the image. Github pages will either by default read a index.md or index.html, which fortunate for you, is already in there. You can press the link and try to run it.
+If nothing is specified the page will display your README.md file. In our case we want it to run the `index.html` file in `docs/`. So change the source from root to docs as shown in the image. Github Pages will either read the 'index.md' or 'index.html' by default. Fortunately for you, this file is already included. You can press the link and try to run it.
 
 Examining the full flowchart again:
 <!--<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/framework.PNG?raw=true" />-->
