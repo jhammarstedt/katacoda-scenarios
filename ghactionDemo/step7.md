@@ -73,9 +73,9 @@ with open("docs/index.html",'w') as f:
 
 
 
-The 'data/generate_output.py' script reads the json with the new data and inserts the specified values into the index.html so it can be displayed on our page.
+The 'src/generate_output.py' script reads the json with the new data and inserts the specified values into the index.html so it can be displayed on our page.
 
-We have to add the benchmarking and formatting scripts to our GitHub action. Open the '.github/workflows/python.yml' file using a text editor and insert the following code below the last line:
+We have to add the benchmarking and formatting scripts to our GitHub action. Open the '.github/workflows/python.yml' file using a text editor and insert the following code below the line containing `pytest src/benchmarking.py --benchmark-json output.json`:
 
 ```
 python src/generate_output.py
