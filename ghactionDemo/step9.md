@@ -3,9 +3,9 @@
 
 From this tutorial we have learnt several new things regarding GitHub actions and pages such as:
 
-- How to enable a GitHub action in your GitHub repository.
-- How to write a simple GitHub action.
-- The meaning of the different components in a GitHub action workflow.
-- How to run a GitHub action and where to find the executed action on github.com
-- What Pytest is and how it can be used in a GitHub action.
-- How to present the results as a GitHub page.
+- How to enable a GitHub Action in your GitHub repository.
+- How to write a simple GitHub Action.
+- The meaning of the different components in a GitHub Action workflow.
+- How to run a GitHub Action and where to find the executed action on github.com
+- What pytest is and how it can be used in a GitHub Action.
+- How to present the results as a website on GitHub Pages.
