@@ -30,6 +30,7 @@ The docs filder contains the CSS and HTML files for the GitHub page. Since we to
 In the scripts folder we have a script for cleaning the table which is mostly for conviniece.
 
 We now need to upload our changes to github to be able to watch the workflow later. 
+Enter some credentials:
 ``` git config --global user.email "you@example.com"```{{execute}} 
 
 ``` git config --global user.name "Tutorial bot"```{{execute}}

@@ -8,7 +8,7 @@
 
 `git push`{{execute}} -->
 
-We will then go to our remote repository at`https://github.com/INSERT_GITHUB_USERNAME/Benchmark_Tutorial `using our preferred web browser (Note: Insert your GitHub username into the url).
+We will then go to our remote repository at`https://github.com/INSERT_GITHUB_USERNAME/Benchmark_Tutorial `using any preferred web browser (Note: Insert your GitHub username into the url).
 
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/github-action-bar.png?raw=true" />
 

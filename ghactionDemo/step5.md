@@ -1,9 +1,8 @@
 # Running the Pytest benchmarking tool
 
-To run the pytest benchmarking tool, we first need some functions to test/benchmark on and an output file. To make life easy we will just name it `benchmark.py` and put it in our source folder.
+To run the pytest benchmarking tool, we first need some functions to test/benchmark on. To make life easy we will just name it `benchmark.py` and put it in our source folder.
  
-`touch src/benchmarking.py`{{execute}}
-`touch output.json`{{execute}}
+ `touch src/benchmarking.py`{{execute}}
 
 
 We then insert the following code into 'benchmarking.py' in the IDE:
@@ -64,8 +63,10 @@ jobs:
                                 pytest src/benchmarking.py --benchmark-json output.json
 ```{{copy}}
 
+This will run the benchmark and the result will be stored in our output.json file.
+
 Commit and push these changes to Github again and watch you test run! Going back to the same place as before you should now be able to see the result of your test:
 
-<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/first_pytest.png?raw=true" />
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/first_pytest.PNG?raw=true" />
 
 

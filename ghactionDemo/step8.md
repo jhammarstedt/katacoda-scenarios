@@ -8,7 +8,8 @@ git commit -m 'full CI benchmarking with gh pages'
 git push
 ```{{execute}}
 
-You should now be able to see how the workflow runs and shortly after the commit should be visible in the table on the page. To clean and reset the table you can just run:
+You should now be able to see how the workflow runs and shortly after the commit should be visible in the table on the page (it might take up to one minute after the workflow run before the page updates). To clean and reset the table you can just run:
 
 `./scripts/clear_table.sh`{{execute}}
 
+And then push the change it to the repository again.

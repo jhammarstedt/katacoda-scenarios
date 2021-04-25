@@ -31,7 +31,7 @@ The documentation for the checkout action is available [here](https://github.com
 
 `uses: actions/setup-python@v1` is an action that sets up a Python environment that we can use for our action. It gives us the ability to download, install and set up Python packages.
 
-`pwd` Prints the current working directory
+`pwd` Prints the current working directory for reference 
 
 `python -m pip install --upgrade pip` Updates pip to the latest version in our environment. Pip is a package installer for Python.
 
