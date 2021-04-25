@@ -12,7 +12,7 @@ Create a src folder
 
 ```mkdir src```{{execute}}
 
-Then write a simple python file:
+Then write a simple Python file:
 
 ```
 cat <<EOM> src/test.py
@@ -28,7 +28,7 @@ mkdir .github
 mkdir .github/workflows 
 ```{{execute}}
 
-**Note** that this directory is hidden, but we can still navigate through it and display it by running `ls -a`{{execute}} or watch it in VScode (recommended)
+**Note** that this directory is hidden, but we can still navigate through it and display it by running `ls -a`{{execute}} or watch it in VSCode (recommended)
 
 The actions are executed from a YML file in 'workflows/' directory. We therefore need to create our own workflow file by running:
 
