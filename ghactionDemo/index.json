@@ -1,44 +1,44 @@
 {
-  "title": "Demo for devops course",
-  "description": "Demo for devops course",
+  "title": "Continious benchmarking with Github Actions",
+  "description": "Learn how to set up a github action with pytest that benchmarks code and then display it using github pages",
   "difficulty": "Intermediate",
-  "time": "13 min",
+  "time": "20 min",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Getting started",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Intro to Actions",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Pushing your first Action",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Running the Action",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "First benchmark",
         "text": "step5.md"
       },
       {
-        "title": "Step 6",
+        "title": "Working with workflow files",
         "text": "step6.md"
       },
       {
-        "title": "Step 7",
+        "title": "Intro to pages",
         "text": "step7.md"
       },
       {
-        "title": "Step 8",
+        "title": "Final touch",
         "text": "step8.md"
       },
       {
-        "title": "Step 9",
+        "title": "Summary",
         "text": "step9.md"
       }
     ],
