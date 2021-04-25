@@ -1,8 +1,10 @@
 # Running the Pytest benchmarking tool
 
-To run the pytest benchmarking tool, we first need some functions to test/benchmark on. To make life easy we will just name it `benchmark.py` and put it in our source folder.
+To run the pytest benchmarking tool, we first need some functions to test/benchmark on and an output file. To make life easy we will just name it `benchmark.py` and put it in our source folder.
  
 `touch src/benchmarking.py`{{execute}}
+`touch output.json`{{execute}}
+
 
 We then insert the following code into 'benchmarking.py' in the IDE:
 
