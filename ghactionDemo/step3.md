@@ -46,7 +46,7 @@ These commands install the dependencies we need for our action using pip. The de
 
 This command will run the simple test.py script that prints out a message.
 
-The documentation for the setup python action is available [here](https://github.com/actions/setup-python)
+The documentation for the setup-python action is available [here](https://github.com/actions/setup-python)
 
 ### Workflow file
 
@@ -75,7 +75,7 @@ jobs:
 
 ## Push Changes to GitHub Repository
 
-We can now push all the changes we have made in the local repository to the remote on github by running the following in the terminal:
+We can now push all the changes we have made in the local repository to the remote on GitHub by running the following in the terminal:
 
 ` git add .`{{execute}}
 
