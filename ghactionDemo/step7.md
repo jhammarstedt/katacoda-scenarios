@@ -1,24 +1,27 @@
-# Handling the data and display it with GitHub Pages
-Now we have an 'output.json' file ready to be displayed. But there are still a couple of issues here. The output file will be overwritten every time and we do not really have a way to display the history and compare the results. One could solve this in multiple ways by simply saving data from the output file in another file, but we will utulize GitHub Pages to display some selected statistics in a table. 
+# Handling the data and display it with Github Pages
+Now we have an output.json file ready to be displayed. But there are still a couple of issues here. The output file will be overwritten every time and we don't really have a way to display the history and compare the results. One could solve this in multiple ways by simply saving data from the output file in another file, but we will utulize github pages to display some selected statistics in a table. 
 
-## Setting up GitHub Pages
-Go to settings on GitHub and press Pages. Press activate and just like that you have a page!
-
+## Setting up github pages
+Go to settings on Github and press Pages. Under source select master and then press save
+Just like that you have a page!
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/pages_intro1.PNG?raw=true" />
 
+Your page should now be published on `https://INSERT_USERNAME.github.io/Benchmark_Tutorial/`
 
-If nothing is specified the page will display your README.md file. In our case we want it to run the `index.html` file in `docs/`. So change the source from root to docs as shown in the image. Github Pages will either read the 'index.md' or 'index.html' by default. Fortunately for you, this file is already included. You can press the link and try to run it.
+If nothing is specified the page will display your README.md file. In our case we want it to run the `index.html` file in `docs/`. So change the source from root to docs as shown in the image. Github pages will either by default read a index.md or index.html, which fortunate for you, is already in there (both the index file and the css file were just taken from this [template website](https://uicookies.com/css-table-templates/)). You can press the link and try to run it. It might be a little slow to update so if it dosen't work wait a little and refresh the page.
 
-Examining the full flowchart again:
-<!--<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/framework.PNG?raw=true" />-->
+Examining the flowchart again:
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/framework.PNG?raw=true" />
 
-<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/tut_2.PNG?raw=true" />
+We haven't adressed the `format_output` file yet. For simplicity we will just write a python script that reads the `output.json` and edits the `index.html` by adding the new table values. For the `index.html` file we choose the include Commit, Date, Mean, Max, Min, Standard Deviation (All in ms). (The file could look odd but you can format it by right clicking and press `Format Document` while watching the file in the IDE)
 
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/index_prev.PNG?raw=true" />
+
+Now let's create the python script.
 
 `touch src/generate_output.py`{{execute}}
 
-We then need to insert the following code into the 'src/generate_output.py' script:
-
+Then we insert the following code (this tutorial won't cover [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) but it's a good package to handle html files in):
 
 ``` 
 import json
@@ -67,7 +70,7 @@ with open("docs/index.html",'w') as f:
 
 
 
-The 'data/generate_output.py' script formats the json file we get when running pytest. It presents the results in an html file using tables. 
+The 'data/generate_output.py' script reads the json with the new data and inserts the specified values into the index.html so it can be displayed on our page.
 
 We have to add the benchmarking and formatting scripts to our GitHub action. Open the '.github/workflows/python.yml' file using a text editor and insert the following code below the last line:
 
@@ -76,3 +79,4 @@ python data/generate_output.py
 ```{{copy}}
 
 This code will run the pytest benchmarking tool on the 'benchmarking.py' script and the results will be stored in the 'output.json' file. The 'data/generate_output.py' will then format the results stored in 'output.json' and store it in the 'index.html' file. 
+

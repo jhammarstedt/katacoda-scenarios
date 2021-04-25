@@ -1,6 +1,6 @@
 # Committing and Pushing Changes to GitHub Repository
 
-The format of the output file is json and it will be stored in the workflow, in order to later display it on our GitHub page we need to actually push it from the workflow to our GitHub repository. This can be done by first commiting the files in the workflow and then using another GitHub action to push them.
+The format of the output file is json and it will be stored in the workflow, in order to later display it on our github page we need to actually push it from the workflow to our github repository. This can be done by first commiting the files in the workflow and then using another github action to push them.
 
 ## Commit
 Begin by commiting the output file:
@@ -14,7 +14,8 @@ Begin by commiting the output file:
 
 ```{{copy}}
 
-This code adds all the changed files from the benchmarking script and commits them using the message "Add new data". We configure our GitHub so that a bot makes the commit using the commands.  
+This code adds all the changed files from the benchmarking script and commits them using the message "Add new data". We configure our GitHub so that a bot makes the commit using the commands. 
+
 git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
 git config --local user.name "github-actions[bot]".
 

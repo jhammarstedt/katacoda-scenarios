@@ -3,18 +3,18 @@
 
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
 ```
-        - uses: actions/checkout@v2
-        with:
-           persist-credentials: false
-           fetch-depth: 0 
-        - uses: actions/setup-python@v1
-        - name: Installing and running pytest
-          run: |
-            pwd
-            python -m pip install --upgrade pip
-            if [ -f requirements.txt ]; 
-            then pip install -r requirements.txt; fi
-            python test.py
+- uses: actions/checkout@v2
+  with:
+        persist-credentials: false
+        fetch-depth: 0 
+- uses: actions/setup-python@v1
+- name: Installing and running pytest
+  run: |
+       pwd
+       python -m pip install --upgrade pip
+       if [ -f requirements.txt ]; 
+       then pip install -r requirements.txt; fi
+       python test.py
 ```{{copy}}
 
 #### Step 1: Check-out GitHub repository
@@ -42,11 +42,9 @@ The documentation for the checkout action is available [here](https://github.com
 
 These commands install the dependencies we need for our action using pip. The dependencies are defined in the requirements.txt file which we have already created.
 
-`python test.py` 
+`python test.py`  will run the simple test.py script that prints out a message.
 
-This command will run the simple test.py script that prints out a message.
-
-The documentation for the setup-python action is available [here](https://github.com/actions/setup-python)
+The documentation for the setup python action is available [here](https://github.com/actions/setup-python)
 
 ### Workflow file
 
@@ -75,7 +73,7 @@ jobs:
 
 ## Push Changes to GitHub Repository
 
-We can now push all the changes we have made in the local repository to the remote on GitHub by running the following in the terminal:
+We can now push all the changes we have made in the local repository to the remote on github by running the following in the terminal:
 
 ` git add .`{{execute}}
 
