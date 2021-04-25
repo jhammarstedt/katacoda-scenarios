@@ -44,7 +44,7 @@ We now need to upload our changes to github to be able to watch the workflow lat
 8. Add it to your personal remote by running: 
 ```git remote add personal https://github.com/YOUR_USERNAME/Benchmark_Tutorial.git ```
 
-9. To push: In normal cases you could use your SSH key but in Katacoda it is easier to take your `personal access token`, if you are not familiar with how to get one just follow the steps [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
+9. To push: In normal cases you could use your SSH key but in Katacoda it is easier to take your `personal access token`, if you are not familiar with how to get one just follow the steps [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). When selecting scopes for your `personal access token`, enable repo and workflow.
 10. Use the copied personal access token and push
     * ``` git push -u personal```{{execute}}
     * enter your username and then paste in your access token as password
