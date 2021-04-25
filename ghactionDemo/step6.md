@@ -23,11 +23,11 @@ git config --local user.name "github-actions[bot]".
 We need to push the committed changes to the remote repository. We do that by inserting the following code directly after the code we used for committing:
 
 ```
-                        - name: Push changes
-                          uses: ad-m/github-push-action@master
-                          with:
-                                github_token: ${{ secrets.GITHUB_TOKEN }}
-                                branch: ${{ github.ref }} 
+- name: Push changes
+  uses: ad-m/github-push-action@master
+  with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }} 
 ```{{copy}}
 
 `uses: ad-m/github-push-action@master` This is another GitHub action for pushing local changes to a GitHub repository using GitHub token.
@@ -58,8 +58,8 @@ jobs:
                                 python -m pip install --upgrade pip
                                 if [ -f requirements.txt ]; 
                                 then pip install -r requirements.txt; fi
-                                python test.py
-                                pytest benchmarking.py --benchmark-json output.json
+                                python src/test.py
+                                pytest src/benchmarking.py --benchmark-json output.json
                         - name: Commit files
                           run: |
                                git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -73,5 +73,7 @@ jobs:
                                 branch: ${{ github.ref }} 
 ```{{copy}}
 
-If you do another commit and push you should be able to see the output.json file in your repository after the Action has executed successfully. (A tip could be to change the benchmark function to benchmark(cheetah) instead and see the performance on the faster code)
+If you do another commit and push you should be able to see the output.json file in your repository after the Action has executed successfully. 
+
+(A tip could be to change the benchmark function to `benchmark(cheetah)` instead and see the performance on the faster code)
 

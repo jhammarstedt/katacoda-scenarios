@@ -35,7 +35,7 @@ This Python script contains two functions that can be used for the performance t
 Now we have our testing functions. Then it's time to add it to the workflow!🛠
 
 Add the following line to the `python.yml` file, continuing right below the requirements installation
-``` pytest benchmarking.py --benchmark-json output.json ```{{copy}}
+``` pytest src/benchmarking.py --benchmark-json output.json ```{{copy}}
                              
 Your '.github/workflows/python.yml' file should now look like this:
 
@@ -58,12 +58,12 @@ jobs:
                                 python -m pip install --upgrade pip
                                 if [ -f requirements.txt ]; 
                                 then pip install -r requirements.txt; fi
-                                python test.py
-                                pytest benchmarking.py --benchmark-json output.json
+                                python src/test.py
+                                pytest src/benchmarking.py --benchmark-json output.json
 ```{{copy}}
 
-Commit these changes to Github again and watch you test run! Going back to the same place as before you should now be able to see the result of your test:
+Commit and push these changes to Github again and watch you test run! Going back to the same place as before you should now be able to see the result of your test:
 
-<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/runnig_pytest.png?raw=true" />
+<img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/first_pytest.png?raw=true" />
 
 
