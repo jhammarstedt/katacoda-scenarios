@@ -7,7 +7,8 @@ To run the pytest benchmarking tool, we first need some functions to test/benchm
 
 We then insert the following code into 'benchmarking.py' in the IDE:
 
-```
+<pre class="file" 
+data-target = "clipboard">
 import pytest
 
 # Here are some example functions to run, can of course be replaced by your own to test things out
@@ -29,7 +30,7 @@ def cheetah(n=1000000):
 # This is where pytest gets called   
 def test_case(benchmark):
     benchmark(turtle)
-```{{copy}}
+</pre>
 
 This Python script contains two functions that can be used for the performance test. The important addition is to actually pass the `benchmark` fixture to the test_case function. When then calling `benchmark()` pytest will run `benchmark(test_function)` on any function passed to it. For more info go [here](https://pypi.org/project/pytest-benchmark/)
 
@@ -40,7 +41,8 @@ Add the following line to the `python.yml` file, continuing right below the requ
                              
 Your '.github/workflows/python.yml' file should now look like this:
 
-```
+<pre class="file" 
+data-target = "clipboard">
 name: Python benchmarking using pytest
 on: push
 jobs:
@@ -61,7 +63,7 @@ jobs:
                                 then pip install -r requirements.txt; fi
                                 python src/test.py
                                 pytest src/benchmarking.py --benchmark-json output.json
-```{{copy}}
+</pre>
 
 This will run the benchmark and the result will be stored in our output.json file.
 
