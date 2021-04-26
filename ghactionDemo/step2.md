@@ -45,7 +45,7 @@ jobs:
                 name: pytest-benchmarking
                 runs-on: ubuntu-latest
                 steps:
-/pre>
+</pre>
 
 ### Jobs
 

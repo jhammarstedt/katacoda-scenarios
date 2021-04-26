@@ -1,21 +1,28 @@
 
 # Adding Steps to GitHub Action
 
-`steps` is the sequence of tasks the job will run, which we will define now. Under steps write the following lines:
-```
-- uses: actions/checkout@v2
-  with:
-        persist-credentials: false
-        fetch-depth: 0 
-- uses: actions/setup-python@v1
-- name: Installing and running pytest
-  run: |
-       pwd
-       python -m pip install --upgrade pip
-       if [ -f requirements.txt ]; 
-       then pip install -r requirements.txt; fi
-       python test.py
-```{{copy}}
+`steps` is the sequence of tasks the job will run, which we will define now. Under steps add the following lines:
+<pre class="github/workflows/python.yml" data-target = "clipboard">
+name: Python benchmarking using pytest
+on: push
+jobs:
+        benchmark:
+                name: pytest-benchmarking
+                runs-on: ubuntu-latest
+                steps:
+                        - uses: actions/checkout@v2
+                          with:
+                                persist-credentials: false
+                                fetch-depth: 0 
+                        - uses: actions/setup-python@v1
+                        - name: Installing and running pytest
+                          run: |
+                                pwd
+                                python -m pip install --upgrade pip
+                                if [ -f requirements.txt ]; 
+                                then pip install -r requirements.txt; fi
+                                python src/test.py
+</pre>
 
 #### Step 1: Check-out GitHub repository
 
@@ -45,31 +52,6 @@ These commands install the dependencies we need for our action using pip. The de
 `python test.py`  will run the simple test.py script that prints out a message.
 
 The documentation for the setup python action is available [here](https://github.com/actions/setup-python)
-
-### Workflow file
-
-The '.github/workflows/python.yml' file should look like this, if you want to make sure the formating is right you can just run this code to get the correct file:
-```
-name: Python benchmarking using pytest
-on: push
-jobs:
-        benchmark:
-                name: pytest-benchmarking
-                runs-on: ubuntu-latest
-                steps:
-                        - uses: actions/checkout@v2
-                          with:
-                                persist-credentials: false
-                                fetch-depth: 0 
-                        - uses: actions/setup-python@v1
-                        - name: Installing and running pytest
-                          run: |
-                                pwd
-                                python -m pip install --upgrade pip
-                                if [ -f requirements.txt ]; 
-                                then pip install -r requirements.txt; fi
-                                python src/test.py
-```{{copy}}
 
 ## Push Changes to GitHub Repository
 
