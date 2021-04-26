@@ -37,7 +37,9 @@ The actions are executed from a YML file in 'workflows/' directory. We therefore
 Then edit the '.github/workflows/python.yml' file in the IDE, to start of we will give the workflow a name, and add a job:
 (if you don't see the file right away, try to press the small `refresh explorer` button in the IDE)
 
-<pre class="github/workflows/python.yml" data-target = "clipboard">
+<pre class="file"
+data-filename="./github/workflows/python.yml" 
+data-target = "clipboard">
 name: Python benchmarking using pytest
 on: push
 jobs:

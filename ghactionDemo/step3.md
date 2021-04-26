@@ -2,7 +2,9 @@
 # Adding Steps to GitHub Action
 
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps add the following lines:
-<pre class="github/workflows/python.yml" data-target = "clipboard">
+<pre class="file"
+data-filename="./github/workflows/python.yml" 
+data-target = "clipboard">
 name: Python benchmarking using pytest
 on: push
 jobs:
