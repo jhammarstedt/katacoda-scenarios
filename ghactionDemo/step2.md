@@ -34,23 +34,18 @@ The actions are executed from a YML file in 'workflows/' directory. We therefore
 
 ``` touch .github/workflows/python.yml```{{execute}}
 
-Then edit the '.github/workflows/python.yml' file in the IDE, to start of we will give the workflow a name:
+Then edit the '.github/workflows/python.yml' file in the IDE, to start of we will give the workflow a name, and add a job:
 (if you don't see the file right away, try to press the small `refresh explorer` button in the IDE)
 
-```
+<pre class="github/workflows/python.yml" data-target = "clipboard">
 name: Python benchmarking using pytest
-```{{copy}}
-
-Then continue to either write yourself or copy the following code:
-
-```
 on: push
 jobs:
         benchmark:
                 name: pytest-benchmarking
                 runs-on: ubuntu-latest
                 steps:
-```{{copy}}
+/pre>
 
 ### Jobs
 
@@ -65,15 +60,3 @@ jobs:
 The full documentation for workflow syntax is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
 
 
-### Workflow file
-
-The '.github/workflows/python.yml' file should look like this, if you want to make sure the formating is right you can just run this code to get the correct file:
-```
-name: Python benchmarking using pytest
-on: push
-jobs:
-        benchmark:
-                name: pytest-benchmarking
-                runs-on: ubuntu-latest
-                steps:
-```{{copy}}

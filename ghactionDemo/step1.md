@@ -31,7 +31,7 @@ In the scripts folder we have a script for cleaning the table which is mostly fo
 
 We now need to upload our changes to github to be able to watch the workflow later. 
 Enter some credentials:
-``` git config --global user.email "you@example.com"```{{execute}} 
+``` git config --global user.email "you@example.com"```{{copy}} 
 
 ``` git config --global user.name "Tutorial bot"```{{execute}}
 
@@ -43,13 +43,13 @@ Enter some credentials:
 6. Ignore to create readme gitignore for now and just create it
 7. Copy the HTTPS link
 8. Add it to your personal remote by running: 
-```git remote add personal https://github.com/YOUR_USERNAME/Benchmark_Tutorial.git ```
+```git remote add personal https://github.com/YOUR_USERNAME/Benchmark_Tutorial.git ```{{copy}}
 
 9. To push: In normal cases you could use your SSH key but in Katacoda it is easier to take your `personal access token`, if you are not familiar with how to get one just follow the steps [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). When selecting scopes for your `personal access token`, enable repo and workflow. (Save the token since you'll need it to push things further on)
 10. Use the copied personal access token and push
     * ``` git push -u personal```{{execute}}
     * enter your username and then paste in your access token as password
-        * note that the password will not be visible when you paste it
+    * Note that the password will not be visible when you paste it
 
 
 So finally everything is set up and we are ready, let us get into the fun stuff!🎈
