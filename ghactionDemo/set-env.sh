@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Cloning repo Benchmarking-DevOps"
 git clone https://github.com/jhammarstedt/Benchmarking-DevOps.git
 
