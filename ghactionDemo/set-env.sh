@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "Cloning repo Benchmarking-DevOps"
 git clone https://github.com/jhammarstedt/Benchmarking-DevOps.git
+cd Benchmarking-DevOps/
 
 echo "Giving chmod access to all relevant scripts"
 chmod +x scripts/clear_tutorial.sh scripts/clear_table.sh scripts/collectEgg.sh
