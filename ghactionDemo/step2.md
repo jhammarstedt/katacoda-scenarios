@@ -1,4 +1,13 @@
 # Setting up an initial action to test the workflow
+<!--Nicely explained with a good image. Great that you take out parts of the bigger image you shown in the beginning, it made it clearer to see what part I was working with.
+
+I have one complaint on this page that follows to some of the other pages. It's not really about the actual content. Rather katacoda. The formatting when copying the code is not correct, which made it a bit annoying to do. I guess one could rewrite it manually but I think it would be nice if you took a closed look at the formatting of it. The issue is consistent on most fields where you copy the longer texts. Works better when you copy the whole file once, maybe let the user copy the whole thing first and the explain everything. There is also a katacoda command to copy things straight into a file (check it out here https://katacoda.com/scenario-examples/scenarios/clipboard).
+
+FIXED BY ONLY HAVING ONE SNIPPET.
+
+ -->
+
+
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/tut_part1.PNG?raw=true" height="400" />
 
 ## Initial Set Up
@@ -39,6 +48,7 @@ Then edit the '.github/workflows/python.yml' file in the IDE, to start of we wil
 
 <pre class="file" 
 data-target = "clipboard">
+
 name: Python benchmarking using pytest
 on: push
 jobs:
@@ -58,6 +68,6 @@ jobs:
 
 `runs-on` is the type of machine to run the job on, which in this case will be the latest version of Ubuntu.
 
-The full documentation for workflow syntax is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
+The full documentation for workflow syntax is available [here](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions).
 
 

@@ -4,6 +4,7 @@
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps add the following lines:
 <pre class="file" 
 data-target = "clipboard">
+
 name: Python benchmarking using pytest
 on: push
 jobs:
@@ -33,7 +34,7 @@ jobs:
 
 `fetch-depth: 0` By default, only a single commit is fetched. This command allows us to fetch all history for all branches and tags.
 
-The documentation for the checkout action is available [here](https://github.com/actions/checkout)
+The documentation for the checkout action is available [here](https://github.com/actions/checkout).
 
 #### Step 2: Set up Python environment and run test script
 
@@ -52,7 +53,7 @@ These commands install the dependencies we need for our action using pip. The de
 
 `python test.py`  will run the simple test.py script that prints out a message.
 
-The documentation for the setup python action is available [here](https://github.com/actions/setup-python)
+The documentation for the setup python action is available [here](https://github.com/actions/setup-python).
 
 ## Push Changes to GitHub Repository
 

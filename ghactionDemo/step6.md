@@ -1,5 +1,14 @@
 # Committing and Pushing Changes to GitHub Repository
+<!--
 
+Same thing with the copying of code messing with the indentation, other than that the content is good. 
+- ADD: MOVE THEM TO ONE FILE?
+
+This is where I had an issue with a merge conflict though. Previous steps seems to have produced files that i had to pull before i could push it. Not sure if that was supposed to happen, if not, look into it. If it is on purpose, then I suggest you add a note about it.
+- ADD: SHOULD WE ADRESS THIS
+
+
+ -->
 The format of the output file is json and it will be stored in the workflow, in order to later display it on our github page we need to actually push it from the workflow to our github repository. This can be done by first commiting the files in the workflow and then using another github action to push them.
 
 ## Commit

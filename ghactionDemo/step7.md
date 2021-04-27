@@ -1,4 +1,11 @@
 # Handling the data and display it with Github Pages
+<!--
+Nice seeing the continuation of the image series and a clear and concise explanation about github pages. Since you say that the tutorial does not cover bs4, which is completely reasonable, but it feels weird to copy or manually write that code, if it is not explained. Maybe you can include that file automatically and only tell the user that it exists.
+
+
+- ADD THIS TO FOLDER AND REMOVE FILE WRITING
+-->
+
 Now we have an output.json file ready to be displayed. But there are still a couple of issues here. The output file will be overwritten every time and we don't really have a way to display the history and compare the results. One could solve this in multiple ways by simply saving data from the output file in another file, but we will utulize github pages to display some selected statistics in a table. 
 
 ## Setting up github pages

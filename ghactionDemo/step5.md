@@ -1,5 +1,11 @@
 # Running the Pytest benchmarking tool
+<!-- 
 
+The steps are explained clearly, would be nice if you gave some more info about what python benchmark does (what measures it takes a.s.o), I know that there is a link, but a short inline explanation would be nice. Also suggest you add a note what the functions do and why you chose them (it is fairly obvious if you know python, but not everyone do) . 
+
+- ADD info on benchmark and python function
+
+-->
 To run the pytest benchmarking tool, we first need some functions to test/benchmark on. To make life easy we will just name it `benchmark.py` and put it in our source folder.
  
  `touch src/benchmarking.py`{{execute}}

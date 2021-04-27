@@ -31,7 +31,7 @@ In the scripts folder we have a script for cleaning the table which is mostly fo
 
 We now need to upload our changes to github to be able to watch the workflow later. 
 Enter some credentials:
-``` git config --global user.email "you@example.com"```{{copy}} 
+``` git config --global user.email "you@example.com"```{{execute}} 
 
 ``` git config --global user.name "Tutorial bot"```{{execute}}
 
