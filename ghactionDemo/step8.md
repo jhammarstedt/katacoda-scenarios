@@ -12,6 +12,8 @@ You should now be able to see how the workflow runs and shortly after the commit
 
 `./scripts/clear_table.sh`{{execute}}
 
-Some scripts might require an **item** to run, a reminder is to be found in the outro.
+Then push the change to the repository. 
 
-And then push the change to the repository. 
+Some scripts might require an **item** to run, a reminder can found in the outro.
+
+

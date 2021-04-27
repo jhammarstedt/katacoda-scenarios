@@ -135,4 +135,4 @@ jobs:
                                 github_token: ${{ secrets.GITHUB_TOKEN }}
                                 branch: ${{ github.ref }}
 </pre>
-<details>
+</details>

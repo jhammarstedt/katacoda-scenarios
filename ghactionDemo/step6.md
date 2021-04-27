@@ -12,7 +12,7 @@ This is where I had an issue with a merge conflict though. Previous steps seem t
  -->
 The format of the output file is JSON and it will be stored in the workflow, to later display it on our GitHub page we need to push it from the workflow to our GitHub repository. This can be done by first committing the files in the workflow and then using another GitHub action to push them.
 
-You can either copy past each of these snippets (you will have to fix the indendation manually) or take the full file at the end with proper formating. Splitting them is mainly for educational purposes. 
+You can either copy paste each of these snippets (you will have to fix the indendation manually) or take the full file at the end with proper formating. Splitting them is mainly for educational purposes. 
 
 
 ## Commit
