@@ -1,16 +1,15 @@
 # Handling the data and display it with Github Pages
 <!--
-Nice seeing the continuation of the image series and a clear and concise explanation about github pages. Since you say that the tutorial does not cover bs4, which is completely reasonable, but it feels weird to copy or manually write that code, if it is not explained. Maybe you can include that file automatically and only tell the user that it exists.
+Nice seeing the continuation of the image series and a clear and concise explanation about GitHub pages. Since you say that the tutorial does not cover bs4, which is completely reasonable, but it feels weird to copy or manually write that code if it is not explained. Maybe you can include that file automatically and only tell the user that it exists.
 
-
-- ADD THIS TO FOLDER AND REMOVE FILE WRITING
+** Fixed: Added the generate_output.json file automatically so user won't have to fix it **
 -->
 
-Now we have an output.json file ready to be displayed. But there are still a couple of issues here. The output file will be overwritten every time and we don't really have a way to display the history and compare the results. One could solve this in multiple ways by simply saving data from the output file in another file, but we will utulize github pages to display some selected statistics in a table. 
+Now we have an output.json file ready to be displayed. But there are still a couple of issues here. The output file will be overwritten every time and we don't have a way to display the history and compare the results. One could solve this in multiple ways by simply saving data from the output file in another file as mentioned earlier, but we will utilize GitHub pages to display some selected statistics in a table. 
 
-## Setting up github pages
+## Setting up GitHub Pages
 Go to settings on Github and press Pages. Under source select master and then press save
-Just like that you have a page!
+Just like that, you have a page!
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/pages_intro1.PNG?raw=true" />
 
 Your page should now be published on `https://INSERT_USERNAME.github.io/Benchmark_Tutorial/`
@@ -18,24 +17,28 @@ Your page should now be published on `https://INSERT_USERNAME.github.io/Benchmar
 If nothing is specified the page will display your README.md file. In our case we want it to run the `index.html` file in `docs/`. 
 * So change the source from root to docs as shown in the image. 
 
-Github pages will either by default read a index.md or index.html, which fortunate for you, is already in there (both the index file and the css file were just taken from this [template website](https://uicookies.com/css-table-templates/)). 
+Github pages will either by default read an index.md or index.html, which fortunately for you, is already in there (both the index file and the CSS file were just taken from this [template website](https://uicookies.com/css-table-templates/)). 
 
-You can press the link and try to run it. It might be a little slow to update so if it dosen't work wait a little and refresh the page.
+You can press the link and try to run it. It might be a little slow to update so if it doesn't work wait for a little and refresh the page.
 
 Examining the flowchart again:
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/framework.PNG?raw=true" />
 
-We haven't adressed the `generate_output` file yet. For simplicity we will just write a python script that reads the `output.json` and edits the `index.html` by adding the new table values. For the `index.html` file we choose the include Commit, Date, Mean, Max, Min, Standard Deviation (All in ms). 
+We haven't addressed the `generate_output` file yet. For simplicity, we will just write a python script that reads the `output.json` and edits the `index.html` by adding the new table values. For the `index.html` file we choose the include Commit, Date, Mean, Max, Min, Standard Deviation (All in ms). 
 
-(The file could look odd but you can format it by right clicking and press `Format Document` while watching the file in the IDE)
+(The file could look odd but you can format it by right-clicking and press `Format Document` while watching the file in the IDE)
 
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/index_prev.PNG?raw=true" />
 
+
+This tutorial won't cover [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) so we have therefore provided you with the script already. But it's a good package to handle HTML files in so feel free to read their documentation.
+
+<!-- 
 Now let's create the python script.
 
 `touch src/generate_output.py`{{execute}}
 
-Then we insert the following code (this tutorial won't cover [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) but it's a good package to handle html files in):
+T
 
 ``` 
 import json
@@ -44,8 +47,8 @@ import os
 
 """
 This file will read the latest output file generated by the workflow and take out relevant statistics.
-As this tutorial is more to show of the workflow and how to set up a github action than building websites,
-we'll be simply inserting the new data in the index.html file instead of having a js file that would read the json file.
+As this tutorial is more to show off the workflow and how to set up a GitHub action than building websites,
+we'll be simply inserting the new data in the index.html file instead of having a js file that would read the JSON file.
 which requires some more integration.
 """
 
@@ -81,21 +84,24 @@ with open("docs/index.html",'w') as f:
       f.write(new_html)
       f.close()
 ```{{copy}}
+-->
 
+The 'src/generate_output.py' script reads the JSON with the new data and inserts the specified values into the index.html so it can be displayed on our page. It's not required to understand it as part of this tutorial but feel free to check it out anyway.
 
+We have to add the benchmarking and formatting scripts to our GitHub action. Open the `.github/workflows/python.yml` file and insert the following code below the line containing `pytest src/benchmarking.py --benchmark-json output.json`:
+<pre class="file" 
+data-target = "clipboard">
 
-The 'src/generate_output.py' script reads the json with the new data and inserts the specified values into the index.html so it can be displayed on our page.
-
-We have to add the benchmarking and formatting scripts to our GitHub action. Open the '.github/workflows/python.yml' file using a text editor and insert the following code below the line containing `pytest src/benchmarking.py --benchmark-json output.json`:
-
-```
 python src/generate_output.py
-```{{copy}}
+</pre>
 
-This code will run the pytest benchmarking tool on the 'benchmarking.py' script and the results will be stored in the 'output.json' file. The 'src/generate_output.py' will then format the results stored in 'output.json' and store it in the 'index.html' file. 
+This code will run the pytest benchmarking tool on the 'benchmarking.py' script and the results will be stored in the 'output.json' file. The 'src/generate_output.py' will then format the results stored in 'output.json' and store them in the 'index.html' file. 
 
-Full python.yml file available here
-```
+<details> 
+<summary>The current python.yml file is available here</summary>
+<pre class="file" 
+data-target = "clipboard">
+
 name: Python benchmarking using pytest
 on: push
 jobs:
@@ -128,4 +134,5 @@ jobs:
                         with:
                                 github_token: ${{ secrets.GITHUB_TOKEN }}
                                 branch: ${{ github.ref }}
-```{{copy}}
+</pre>
+<details>

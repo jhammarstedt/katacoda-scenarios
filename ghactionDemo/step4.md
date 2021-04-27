@@ -1,8 +1,10 @@
 # Running the GitHub Action
 <!-- FEEDBACK
-Very clear images showing what todo, a nice addition would be to explain the steps shown in the log (how the relate to the steps in the workflow file) making it more intuitive why that subsection should be selected.
+Very clear images showing what to do, a nice addition would be to explain the steps shown in the log (how they relate to the steps in the workflow file) making it more intuitive why that subsection should be selected.
+NEEDS TO BE ADDED
+
   -->
-We will then go to our remote repository at`https://github.com/INSERT_GITHUB_USERNAME/Benchmark_Tutorial `{{copy}}using any preferred web browser (Note: Insert your GitHub username into the url).
+We will then go to our remote repository at`https://github.com/INSERT_GITHUB_USERNAME/Benchmark_Tutorial `{{copy}}using any preferred web browser (Note: Insert your GitHub username into the URL).
 
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/github-action-bar.png?raw=true" />
 
@@ -19,7 +21,7 @@ Click the workflow to get more details regarding its execution. We should be abl
 
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/demo-action-result.png?raw=true" />
 
-Click 'pytest-benchmarking' to get more detailed information of each step in the workflow as seen in the image above.
+Click 'pytest-benchmarking' to get more detailed information on each step in the workflow as seen in the image above.
 
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/demo-action-result-clicked.png?raw=true" />
 
@@ -28,5 +30,3 @@ Click the 'Installing and running pytest' step to get the workflow output in the
 `"Hello you're running the action on a commit, seeing this message means that everything until now seems to work!"`
 
 in the output. In the image above, you can find the message on line 42.
-
-

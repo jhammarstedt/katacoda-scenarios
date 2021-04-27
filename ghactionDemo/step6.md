@@ -2,14 +2,18 @@
 <!--
 
 Same thing with the copying of code messing with the indentation, other than that the content is good. 
-- ADD: MOVE THEM TO ONE FILE?
+**Fixed: Added explanation and a fully formated snippet at the end**
 
-This is where I had an issue with a merge conflict though. Previous steps seems to have produced files that i had to pull before i could push it. Not sure if that was supposed to happen, if not, look into it. If it is on purpose, then I suggest you add a note about it.
-- ADD: SHOULD WE ADRESS THIS
+This is where I had an issue with a merge conflict though. Previous steps seem to have produced files that I had to pull before I could push them. Not sure if that was supposed to happen, if not, look into it. If it is on purpose, then I suggest you add a note about it.
+
+**Fixed: Added note about merge conflict**
 
 
  -->
-The format of the output file is json and it will be stored in the workflow, in order to later display it on our github page we need to actually push it from the workflow to our github repository. This can be done by first commiting the files in the workflow and then using another github action to push them.
+The format of the output file is JSON and it will be stored in the workflow, to later display it on our GitHub page we need to push it from the workflow to our GitHub repository. This can be done by first committing the files in the workflow and then using another GitHub action to push them.
+
+You can either copy past each of these snippets (you will have to fix the indendation manually) or take the full file at the end with proper formating. Splitting them is mainly for educational purposes. 
+
 
 ## Commit
 Begin by commiting the output file:
@@ -41,7 +45,7 @@ data-target = "clipboard">
         branch: ${{ github.ref }} 
 </pre>
 
-`uses: ad-m/github-push-action@master` This is another GitHub action for pushing local changes to a GitHub repository using GitHub token.
+`uses: ad-m/github-push-action@master` This is another GitHub action for pushing local changes to a GitHub repository using a GitHub token.
 
 `github_token: ${{ secrets.GITHUB_TOKEN }}` This is the GitHub token needed to authenticate the push.
 
@@ -88,7 +92,9 @@ jobs:
                                 branch: ${{ github.ref }} 
 </pre>
 </details> 
-If you do another commit and push you should be able to see the output.json file in your repository after the Action has executed successfully. 
+If you do another commit and push you should be able to see the output.json file in your repository after the Action has been executed successfully. 
 
-(A tip could be to change the benchmark function to `benchmark(cheetah)` instead and see the performance on the faster code)
+**NOTE** if you get any merge conflicts with `output.json` or `index.HTML` when you try to push, you can just merge them by force for the sake of this tutorial and commit again. This is because `pytest` will run and give a new output for every push.
+
+
 

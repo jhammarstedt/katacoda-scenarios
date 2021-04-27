@@ -1,5 +1,10 @@
 
 # Adding Steps to GitHub Action
+<!--
+Good explanations and nice with links pointing to additional material. However, noticed that the content of the workflow file on top is different from the one at the bottom.  I didn't notice this until the workflow failed when I pushed it, please fix that (missing "src/" prefixed in the python command). FIXED
+
+-->
+
 
 `steps` is the sequence of tasks the job will run, which we will define now. Under steps add the following lines:
 <pre class="file" 
@@ -28,9 +33,9 @@ jobs:
 
 #### Step 1: Check-out GitHub repository
 
-`uses: actions/checkout@v2` is an action that checks-out our repository under $GITHUB_WORKSPACE, so our workflow can access it.
+`uses: actions/checkout@v2` is an action that checks out our repository under $GITHUB_WORKSPACE, so our workflow can access it.
 
-`persist-credentials: false` We need a GitHub auth token to enable our scripts to run authenticated git commands. This auth token is removed during post-job clean up by default. This command allows us to opt-out of this so that our auth token is persistent.
+`persist-credentials: false` We need a GitHub auth token to enable our scripts to run authenticated git commands. This auth token is removed during post-job clean-up by default. This command allows us to opt out of this so that our auth token is persistent.
 
 `fetch-depth: 0` By default, only a single commit is fetched. This command allows us to fetch all history for all branches and tags.
 
@@ -57,7 +62,7 @@ The documentation for the setup python action is available [here](https://github
 
 ## Push Changes to GitHub Repository
 
-We can now push all the changes we have made in the local repository to the remote on github by running the following in the terminal:
+We can now push all the changes we have made in the local repository to the remote on GitHub by running the following in the terminal:
 
 ` git add .`{{execute}}
 
@@ -65,5 +70,4 @@ We can now push all the changes we have made in the local repository to the remo
 
 ` git push`{{execute}}
  
- This will actually trigger the action right away. In the next step you'll learn where to find it!
-
+ This will trigger the action right away. In the next step, you'll learn where to find it!
