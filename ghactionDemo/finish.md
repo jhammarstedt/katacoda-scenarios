@@ -9,5 +9,6 @@ Bonus: Did you find the easter egg?🥚
   <details> 
     <summary>Item?</summary>
     Remember to bring a **shovel**
+    <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/easter_egg.PNG?raw=true"  />
   </details>
 </details>

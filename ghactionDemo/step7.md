@@ -5,10 +5,11 @@ Nice seeing the continuation of the image series and a clear and concise explana
 ** Fixed: Added the generate_output.json file automatically so user won't have to fix it **
 -->
 
-Now we have an output.json file ready to be displayed. But there are still a couple of issues here. The output file will be overwritten every time and we don't have a way to display the history and compare the results. One could solve this in multiple ways by simply saving data from the output file in another file as mentioned earlier, but we will utilize GitHub pages to display some selected statistics in a table. 
+Now we have an output.json file ready to be displayed. But there are still a couple of issues here. The output file will be overwritten every time and we don't have a way to display the history and compare the results. One could solve this in multiple ways by simply saving data from the output file in another file as mentioned earlier, but we will utilize GitHub Pages to display some selected statistics in a table. 
 
 ## Setting up GitHub Pages
-Go to settings on Github and press Pages. Under source select master and then press save
+Go to settings on Github and press Pages. Under source select master and then press save.
+
 Just like that, you have a page!
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/pages_intro1.PNG?raw=true" />
 
@@ -17,16 +18,16 @@ Your page should now be published on `https://INSERT_USERNAME.github.io/Benchmar
 If nothing is specified the page will display your README.md file. In our case we want it to run the `index.html` file in `docs/`. 
 * So change the source from root to docs as shown in the image. 
 
-Github pages will either by default read an index.md or index.html, which fortunately for you, is already in there (both the index file and the CSS file were just taken from this [template website](https://uicookies.com/css-table-templates/)). 
+Github Pages will either by default read an index.md or index.html, which fortunately for you, is already in there (both the index file and the CSS file were just taken from this [template website](https://uicookies.com/css-table-templates/)). 
 
 You can press the link and try to run it. It might be a little slow to update so if it doesn't work wait for a little and refresh the page.
 
 Examining the flowchart again:
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/framework.PNG?raw=true" />
 
-We haven't addressed the `generate_output` file yet. For simplicity, we will just write a python script that reads the `output.json` and edits the `index.html` by adding the new table values. For the `index.html` file we choose the include Commit, Date, Mean, Max, Min, Standard Deviation (All in ms). 
+We haven't addressed the `generate_output` file yet. For simplicity, we will just write a python script that reads the `output.json` and edits the `index.html` by adding the new table values. For the `index.html` file we choose the include Commit, Date, Mean, Standard Deviation (All in ms) for both the turtle and cheetah function. 
 
-(The file could look odd but you can format it by right-clicking and press `Format Document` while watching the file in the IDE)
+(The index file could look odd but you can format it by right-clicking and press `Format Document` while watching the file in the IDE)
 
 <img src="https://github.com/jhammarstedt/katacoda-scenarios/blob/main/ghactionDemo/images/index_prev.PNG?raw=true" />
 
