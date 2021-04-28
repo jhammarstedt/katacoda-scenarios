@@ -3,6 +3,7 @@ Now we have everything we need to both run the continuous benchmarking and displ
 
 So add, commit and push your changes!
 ```
+git pull
 git add .
 git commit -m 'full CI benchmarking with GH pages'
 git push

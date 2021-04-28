@@ -17,12 +17,6 @@ I have one complaint on this page that follows some of the other pages. It's not
 For our initial setup, we are gonna create a simple "Hello World" action. 
 We accomplish this by creating a Python file by running the following commands in the terminal:
 
-Create a src folder
-
-```mkdir src```{{execute}}
-
-Then write a simple Python file:
-
 ```
 cat <<EOM> src/test.py
 print("Hello you're running the action on a commit, seeing this message means that everything until now seems to work!")
