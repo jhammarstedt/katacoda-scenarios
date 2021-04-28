@@ -6,7 +6,7 @@ Good explanations and nice with links pointing to additional material. However, 
 -->
 
 
-`steps` is the sequence of tasks the job will run, which we will define now. Under steps add the following lines:
+`steps` is the sequence of tasks the job will run, which we will define now. Add the lines underneath steps or replace the code with the following lines:
 <pre class="file" 
 data-target = "clipboard">
 
